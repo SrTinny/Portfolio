@@ -1,6 +1,16 @@
 /* Estilo geral */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Variáveis de cores */
+:root {
+  --color-background: rgb(37, 36, 36);
+  --color-text: #eaeaea;
+  --color-primary: #fd9800;
+  --color-secondary: #9b9b9b;
+  --color-overlay: rgba(0, 0, 0, 0.582);
+  --color-dark-overlay: rgba(0, 0, 0, 0.7);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
@@ -10,12 +20,13 @@
 }
 
 body {
-  background-color: rgb(37, 36, 36);
+  background-color: var(--color-background);
+  color: var(--color-text);
   height: 100vh;
 }
 
 .interface {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -27,30 +38,37 @@ body {
   padding: 10px 40px;
   font-size: 18px;
   font-weight: 600;
-  background-color: #fd9800;
+  background-color: var(--color-primary);
   border: 0;
   border-radius: 30px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: all 0.3s ease-in-out;
 }
 
 h2.titulo {
-  color: #fff;
+  color: var(--color-text);
   font-size: 38px;
   text-align: center;
 }
 
 h2.titulo span {
-  color: #fd9800;
+  color: var(--color-primary);
 }
 
 button:hover,
 form .btn-enviar input:hover {
-  box-shadow: 0px 0px 8px #fd9800;
+  box-shadow: 0px 0px 8px var(--color-primary);
   transform: scale(1.05);
 }
 
 /* Estilo do cabeçalho */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -58,22 +76,22 @@ header {
 }
 
 header > .interface {
-  padding: 10px 0%;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(37, 36, 36);
+  background-color: var(--color-background);
 }
 
 header a {
-  color: #9b9b9b;
+  color: var(--color-secondary);
   text-decoration: none;
   display: inline-block;
-  transition: 0.2s;
+  transition: all 0.3s ease-in-out;
 }
 
 header a:hover {
-  color: #fff;
+  color: var(--color-text);
   transform: scale(1.05);
 }
 
@@ -86,6 +104,36 @@ header nav ul li {
   padding: 0px 40px;
 }
 
+/* Botão de alternância de tema */
+.toggle-theme {
+  display: flex;
+  align-items: center;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--color-text);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Tema claro */
+.light-mode {
+  --color-background: #ffffff;
+  --color-text: #333333;
+  --color-primary: #ff5722;
+  --color-secondary: #666666;
+  --color-overlay: rgba(255, 255, 255, 0.8);
+  --color-dark-overlay: rgba(255, 255, 255, 0.7);
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+
 /* Estilo do topo do site */
 section.topo-do-site .flex {
   padding: 100px 4%;
@@ -95,17 +143,17 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site h1 {
-  color: #fff;
+  color: var(--color-text);
   font-size: 46px;
   line-height: 40px;
 }
 
 .topo-do-site .txt-topo-do-site h1 span {
-  color: #fd9800;
+  color: var(--color-primary);
 }
 
 .topo-do-site .txt-topo-do-site p {
-  color: #fff;
+  color: var(--color-text);
   margin: 40px 0px;
 }
 
@@ -135,20 +183,18 @@ section.especialidades .flex {
   display: grid;
   gap: 60px;
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
 }
-
-
 
 .especialidades .especialidades-box {
   display: flex;
   width: 180px;
   height: 180px;
-  color: #fff;
+  color: var(--color-text);
   padding: 40px;
   margin-top: 45px;
   border-radius: 20px;
-  transition: 0.2s;
+  transition: all 0.3s ease-in-out;
   text-align: center;
   flex-direction: column;
   justify-content: center;
@@ -156,13 +202,15 @@ section.especialidades .flex {
 }
 
 .especialidades .especialidades-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 8px #9b9b9b;
+  transform: scale(1.1);
+  background-color: var(--color-primary);
+  color: black;
+  box-shadow: 0 0 15px var(--color-primary);
 }
 
 .especialidades .especialidades-box img {
-  height: 60px; /* Corrigi a unidade de medida */
-  width: 60px; /* Corrigi a unidade de medida */
+  height: 60px;
+  width: 60px;
 }
 
 .especialidades .especialidades-box h3 {
@@ -181,7 +229,7 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre {
-  color: #fff;
+  color: var(--color-text);
 }
 
 .sobre .txt-sobre h2 {
@@ -191,7 +239,7 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre h2 span {
-  color: #fd9800;
+  color: var(--color-primary);
   display: block;
 }
 
@@ -205,11 +253,16 @@ section.sobre .flex {
   height: 60px;
   border-radius: 50%;
   border: none;
-  background-color: #fd9800;
+  background-color: var(--color-primary);
   font-size: 22px;
   cursor: pointer;
   margin: 0 10px;
-  transition: 0.2s;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-social button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px var(--color-primary);
 }
 
 /* Estilo do portfólio */
@@ -218,7 +271,7 @@ section.sobre .flex {
   padding: 80px 4%;
   max-width: 100%;
   margin: 0 auto;
-  box-shadow: 0 0 20px 5px #9b9b9b;
+  box-shadow: 0 0 20px 5px var(--color-secondary);
 }
 
 .portifolio .interface {
@@ -226,23 +279,14 @@ section.sobre .flex {
 }
 
 .carousel {
-  padding: 40px 0%;
+  padding: 40px 0;
   display: flex;
   flex-flow: row nowrap;
   overflow: hidden;
-  outline: none;
 }
 
 .carousel .flex {
   gap: 20px;
-}
-
-.flex-carousel::-webkit-scrollbar {
-  display: none;
-}
-.flex-carousel {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .img-port {
@@ -250,7 +294,7 @@ section.sobre .flex {
   height: 460px;
   background-size: cover;
   background-position: 0% 100% 0% 0%;
-  transition: 8s;
+  transition: all 0.8s ease-in-out;
   cursor: pointer;
   border-radius: 40px;
   position: relative;
@@ -266,16 +310,16 @@ section.sobre .flex {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.582);
+  background-color: var(--color-overlay);
   border-radius: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 24px;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-text);
   opacity: 0;
-  transition: 0.5s;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .orvelay:hover {
@@ -286,31 +330,31 @@ section.sobre .flex {
 .arrow-right {
   z-index: 1;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: auto;
-  bottom: 0;
-  font-size: 20px;
-  line-height: 250px;
+  top: 50%;
+  font-size: 2rem;
   width: 40px;
+  height: 40px;
   text-align: center;
-  color: #fff;
+  color: var(--color-text);
   cursor: pointer;
-  border: none;
-  background: linear-gradient(to left, transparent 0%, black 200%);
-  opacity: 0.2;
-  transition: all 600ms ease-in-out;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  background-color: var(--color-dark-overlay);
+  transition: all 0.3s ease-in-out;
 }
 
 .arrow-right {
-  left: auto;
-  right: 0;
-  background: linear-gradient(to right, transparent 0%, black 200%);
+  right: 10px;
+}
+
+.arrow-left {
+  left: 10px;
 }
 
 .arrow-left:hover,
 .arrow-right:hover {
-  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px var(--color-primary);
 }
 
 /* Estilo do formulário */
@@ -331,12 +375,12 @@ form {
 form input,
 form textarea {
   width: 100%;
-  background-color: #9b9b9b28;
+  background-color: var(--color-secondary);
   border: none;
   outline: none;
   padding: 20px 15px;
   border-radius: 15px;
-  color: #fff;
+  color: var(--color-text);
   font-size: 18px;
 }
 
@@ -352,17 +396,22 @@ form .btn-enviar {
 
 form .btn-enviar input {
   width: 120px;
-  background-color: #fd9800;
+  background-color: var(--color-primary);
   color: black;
   cursor: pointer;
   font-weight: 700;
-  transition: 0.2s;
+  transition: all 0.3s ease-in-out;
+}
+
+form .btn-enviar input:active {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 5px var(--color-primary) inset;
 }
 
 /* Estilo do rodapé */
 footer {
   padding: 60px 4%;
-  box-shadow: 0 0 20px 5px #9b9b9b;
+  box-shadow: 0 0 20px 5px var(--color-secondary);
 }
 
 footer .flex {
@@ -374,15 +423,18 @@ footer .line-footer {
 }
 
 .borda {
-  border-top: 2px solid #fd9800;
+  border-top: 2px solid var(--color-primary);
 }
 
 footer .line-footer p i {
-  color: #fd9800;
+  color: var(--color-primary);
   font-size: 22px;
 }
 
 footer .line-footer p a {
-  color: #fff;
+  color: var(--color-text);
 }
 
+footer .line-footer p a:hover {
+  color: var(--color-primary);
+}

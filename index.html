@@ -3,17 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <meta
+      name="description"
+      content="João Victor Duarte - Desenvolvedor Fullstack. Portfólio com projetos, especialidades e informações de contato."
+    />
+    <meta name="author" content="João Victor Duarte" />
+    <meta
+      name="keywords"
+      content="Desenvolvimento Web, React, Node.js, JavaScript, Portfólio, Fullstack"
+    />
+    <meta property="og:title" content="Portfólio - João Victor Duarte" />
+    <meta
+      property="og:description"
+      content="Portfólio de desenvolvedor com projetos, habilidades e contato."
+    />
+    <meta property="og:image" content="images/logo.jpg" />
+    <meta property="og:url" content="https://seu-site-aqui.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="responsive.css" />
     <title>Tinny DEV</title>
   </head>
+
   <body>
     <header>
       <div class="interface">
         <a href="#" class="logo">
-          <img src="images/logo.jpg" alt="Logo da Tinny DEV" 
-          style="width: 60px; height: 60px; border-radius: 50%"/>
+          <img
+            src="images/logo.jpg"
+            alt="Logo da Tinny DEV"
+            style="width: 60px; height: 60px; border-radius: 50%"
+          />
         </a>
         <nav class="menu-desktop">
           <ul>
@@ -23,6 +52,15 @@
             <li><a href="#portfolio">Projetos</a></li>
           </ul>
         </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <i class="bi bi-list"></i>
+        </div>
+
+        <div class="toggle-theme">
+          <button id="theme-toggle">
+            <i class="bi bi-brightness-high"></i>
+          </button>
+        </div>
 
         <div class="btn-contato">
           <a href="#form"><button>Contato</button></a>
@@ -37,11 +75,14 @@
             <div class="txt-topo-do-site">
               <h1>CRIATIVIDADE EM EXPERIÊNCIAS DIGITAIS<span>.</span></h1>
               <p>
-                "Seja bem-vindo à inovação digital do futuro! Aqui, na nossa plataforma, 
-                reunimos os talentos mais criativos e os especialistas mais experientes em desenvolvimento, 
-                tecnologia e tudo o que envolve o universo digital. Estamos prontos para transformar 
-                suas ideias em realidade, oferecendo soluções personalizadas e inovadoras para impulsionar o seu negócio. 
-                Junte-se a nós e embarque nessa jornada de descoberta, aprendizado e crescimento no mundo fascinante da tecnologia!"
+                "Seja bem-vindo à inovação digital do futuro! Aqui, na nossa
+                plataforma, reunimos os talentos mais criativos e os
+                especialistas mais experientes em desenvolvimento, tecnologia e
+                tudo o que envolve o universo digital. Estamos prontos para
+                transformar suas ideias em realidade, oferecendo soluções
+                personalizadas e inovadoras para impulsionar o seu negócio.
+                Junte-se a nós e embarque nessa jornada de descoberta,
+                aprendizado e crescimento no mundo fascinante da tecnologia!"
               </p>
               <div class="btn-contato">
                 <a href="#"><button>Entre em contato</button></a>
@@ -55,64 +96,85 @@
         </div>
       </section>
 
-      <section class="especialidades" id="skills">
+      <section class="especialidades" id="skills" data-aos="fade-up">
         <div class="interface">
           <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
-          <div class="flex">     
+          <div class="flex">
             <div class="especialidades-box">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+              />
               <h3>Java</h3>
             </div>
 
             <div class="especialidades-box">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+              />
               <h3>Git</h3>
             </div>
 
             <div class="especialidades-box">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              />
               <h3>React</h3>
             </div>
 
             <div class="especialidades-box">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+              />
               <h3>PHP</h3>
             </div>
 
             <div class="especialidades-box">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+              />
               <h3>SQL</h3>
             </div>
 
             <div class="especialidades-box">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+              />
               <h3>Node</h3>
             </div>
 
             <div class="especialidades-box">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+              />
               <h3>Bootstrap</h3>
             </div>
-            
+
             <div class="especialidades-box">
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"/>
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"
+              />
               <h3>JavaScript</h3>
             </div>
-            
+
             <div class="especialidades-box">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+              />
               <h3>C</h3>
             </div>
-        
+
             <div class="especialidades-box">
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"/>
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+              />
               <h3>Python</h3>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="sobre" id="about">; 
+      <section class="sobre" id="about" data-aos="fade-up">
+        ;
         <div class="interface">
           <div class="flex">
             <div class="img-sobre">
@@ -149,20 +211,28 @@
                 a equipe.
               </p>
               <div class="btn-social">
-                <a href="https://www.instagram.com/sr.tinny/"><button><i class="bi bi-instagram"></i></button></a>
-                <a href="#"><button><i class="bi bi-youtube"></i></button></a>
-                <a href="https://www.linkedin.com/in/joao-victor-duarte-0b0bbb240/"><button><i class="bi bi-linkedin"></i></button></a>
-                <a href="https://github.com/SrTinny"><button><i class="bi bi-github"></i></button></a>
+                <a href="https://www.instagram.com/sr.tinny/"
+                  ><button><i class="bi bi-instagram"></i></button
+                ></a>
+                <a href="#"
+                  ><button><i class="bi bi-youtube"></i></button
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/joao-victor-duarte-0b0bbb240/"
+                  ><button><i class="bi bi-linkedin"></i></button
+                ></a>
+                <a href="https://github.com/SrTinny"
+                  ><button><i class="bi bi-github"></i></button
+                ></a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="portifolio" id="portfolio">
+      <section class="portifolio" id="portfolio" data-aos="fade-up">
         <h2 class="titulo">MEU <span>PORTIFÓLIO.</span></h2>
         <div class="interface">
-          
           <button class="arrow-left control" aria-label="previus-image">
             <i class="bi bi-caret-left"></i>
           </button>
@@ -175,30 +245,48 @@
             <div class="carousel">
               <div class="flex">
                 <a href="https://bootstrap-modelo.vercel.app/">
-                  <div class="img-port item currentItem" style="background-image: url(images/projeto1.jpg)">
+                  <div
+                    class="img-port item currentItem"
+                    style="background-image: url(images/projeto1.jpg)"
+                  >
                     <div class="orvelay">iMovi</div>
                   </div>
                 </a>
 
                 <a href="https://pokedex-kappa-azure.vercel.app/">
-                  <div class="img-port item" style="background-image: url(images/projeto2.jpg)">
+                  <div
+                    class="img-port item"
+                    style="background-image: url(images/projeto2.jpg)"
+                  >
                     <div class="orvelay">Pokedex</div>
                   </div>
                 </a>
 
                 <a href="https://tela-de-login-league-of-legends.vercel.app/">
-                  <div class="img-port item" style="background-image: url(images/projeto3.jpg)">
-                    <div class="orvelay">Tela de login <br> League of legends</div>
+                  <div
+                    class="img-port item"
+                    style="background-image: url(images/projeto3.jpg)"
+                  >
+                    <div class="orvelay">
+                      Tela de login <br />
+                      League of legends
+                    </div>
                   </div>
                 </a>
 
                 <a href="https://explore-lab-01-tawny.vercel.app/">
-                  <div class="img-port item" style="background-image: url(images/projeto4.jpg)">
+                  <div
+                    class="img-port item"
+                    style="background-image: url(images/projeto4.jpg)"
+                  >
                     <div class="orvelay">Rocket PAY</div>
                   </div>
                 </a>
-                
-                <div class="img-port item" style="background-image: url(images/projeto5.jpg)">
+
+                <div
+                  class="img-port item"
+                  style="background-image: url(images/projeto5.jpg)"
+                >
                   <div class="orvelay">Projeto 1</div>
                 </div>
               </div>
@@ -207,7 +295,7 @@
         </div>
       </section>
 
-      <section class="formulario" id="form">
+      <section class="formulario" id="form" data-aos="fade-up">
         <div class="interface">
           <h2 class="titulo">FALA <span>COMIGO.</span></h2>
           <form action="">
@@ -276,7 +364,6 @@
       </div>
     </footer>
 
-    
     <script src="scripts.js"></script>
   </body>
 </html>

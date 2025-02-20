@@ -52,3 +52,58 @@ document.addEventListener("DOMContentLoaded", function () {
   showSlide(currentSlide);
 });
 
+function toggleMenu() {
+  const menu = document.querySelector(".menu-desktop"); // Seleciona o menu
+  if (menu) {
+    menu.classList.toggle("fullscreen"); // Alterna a exibição em tela cheia
+    menu.classList.toggle("open"); // Alterna o estado de abertura
+  }
+}
+
+// Fechar o menu ao clicar em um link
+const menuLinks = document.querySelectorAll(".menu-desktop a"); // Seleciona todos os links do menu
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const menu = document.querySelector(".menu-desktop");
+    if (menu.classList.contains("open")) {
+      menu.classList.remove("fullscreen"); // Remove a classe de tela cheia
+      menu.classList.remove("open"); // Fecha o menu
+    }
+  });
+});
+
+AOS.init({
+  duration: 1000, // Duração da animação em ms
+});
+
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // Impede o envio padrão
+  alert("Mensagem enviada com sucesso!");
+  form.reset(); // Limpa os campos do formulário
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  // Verifica o tema salvo no localStorage
+  if (localStorage.getItem("theme") === "light") {
+    body.classList.add("light-mode");
+    themeToggle.innerHTML = '<i class="bi bi-moon-stars"></i>';
+  }
+
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
+
+    if (body.classList.contains("light-mode")) {
+      localStorage.setItem("theme", "light");
+      themeToggle.innerHTML = '<i class="bi bi-moon-stars"></i>';
+    } else {
+      localStorage.setItem("theme", "dark");
+      themeToggle.innerHTML = '<i class="bi bi-brightness-high"></i>';
+    }
+  });
+});
+
