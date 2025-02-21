@@ -286,11 +286,14 @@ section.sobre .flex {
 }
 
 .carousel .flex {
+  display: flex;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1); /* Efeito suave */
   gap: 20px;
 }
 
+
 .img-port {
-  width: 360px;
+  width: 385px;
   height: 460px;
   background-size: cover;
   background-position: 0% 100% 0% 0%;

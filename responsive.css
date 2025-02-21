@@ -30,30 +30,19 @@
   }
 
   /* 🔹 Estilos dos links do menu */
-
   .menu-desktop.fullscreen ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Organiza os itens em coluna */
+    flex-direction: column;
     align-items: center;
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 20px;
   }
-  
 
   .menu-desktop.fullscreen li {
     width: 100%;
     text-align: center;
-  }
-
-  .menu-desktop ul {
-    list-style: none;
-    text-align: center;
-  }
-
-  .menu-desktop li {
-    margin: 15px 0;
   }
 
   .menu-desktop a {
@@ -84,7 +73,6 @@
     color: var(--color-text) !important;
   }
 
-  /* Quando o menu está aberto, anima o ícone */
   .menu-toggle.open i {
     transform: rotate(90deg);
   }
@@ -139,14 +127,19 @@
   }
 
   /* 🔹 PORTFÓLIO */
-  .portifolio .arrow-left,
-  .portifolio .arrow-right {
-    display: none;
+  .carousel {
+    overflow: hidden;
   }
 
-  .portifolio .carousel {
-    cursor: pointer;
-    touch-action: pan-y;
+  .carousel .flex {
+    display: flex; /* Garantido que seja flex */
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .img-port {
+    flex: 0 0 48%; /* 2 itens por vez */
+    max-width: 48%;
   }
 
   /* 🔹 SOBRE */
@@ -186,5 +179,25 @@
 
   footer .btn-social {
     margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel .flex {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+
+  .img-port {
+    flex: 0 0 100%; /* 1 item por vez */
+    max-width: 100%;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
   }
 }
