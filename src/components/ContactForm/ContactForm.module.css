@@ -1,5 +1,5 @@
 .formulario {
-  padding: 40px 4%;
+  padding: 5rem 4%; /* 80px */
   background-color: var(--color-background);
 }
 
@@ -7,7 +7,7 @@
   font-size: 2.5rem;
   color: var(--color-primary);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 form {
@@ -15,19 +15,22 @@ form {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  justify-content: center;
+  gap: 1rem; /* 16px */
+  margin-top: 2.5rem; /* 40px */
 }
 
 form input,
 form textarea {
   width: 100%;
-  padding: 15px;
-  font-size: 16px;
+  padding: 1.25rem 1rem; /* 20px 15px */
+  font-size: 1rem;
   border: 1px solid var(--color-border, #ccc);
-  border-radius: 8px;
+  border-radius: 0.9375rem; /* 15px */
   outline: none;
-  resize: vertical;
-  background-color: var(--color-input-bg, #fff);
+  background-color: var(--color-input-bg, var(--color-secondary));
+  color: var(--color-text);
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 form input:focus,
@@ -36,20 +39,35 @@ form textarea:focus {
   box-shadow: 0 0 5px var(--color-primary);
 }
 
+form textarea {
+  resize: none;
+  max-height: 200px;
+}
+
 .btnEnviar {
+  margin-top: 1.25rem; /* 20px */
   text-align: center;
 }
 
 .btnEnviar input[type="submit"] {
+  width: 7.5rem; /* 120px */
   background-color: var(--color-primary);
-  color: white;
+  color: #fff;
+  font-weight: 700;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 0.75rem 1.5rem; /* 12px 24px */
+  border-radius: 0.5rem; /* 8px */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 .btnEnviar input[type="submit"]:hover {
-  background-color: var(--color-primary-hover, #005bb5);
+  background-color: var(--color-primary-hover, #e68900);
 }
+
+.btnEnviar input[type="submit"]:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px var(--color-primary) inset;
+}
+
+

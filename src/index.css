@@ -1,5 +1,7 @@
 /* Estilo geral */
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 /* Variáveis de cores */
 :root {
   --color-background: rgb(37, 36, 36);
@@ -19,8 +21,6 @@
   --color-overlay: rgba(255, 255, 255, 0.8);
   --color-dark-overlay: rgba(255, 255, 255, 0.7);
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
@@ -69,4 +69,22 @@ button:hover,
 form .btn-enviar input:hover {
   box-shadow: 0px 0px 8px var(--color-primary);
   transform: scale(1.05);
+}
+
+.toggle-theme {
+  display: flex;
+  align-items: center;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--color-text);
+  transition: transform 0.3s ease-in-out;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
 }

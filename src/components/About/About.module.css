@@ -1,5 +1,5 @@
 .sobre {
-  padding: 80px 4%;
+  padding: 5rem 4%; /* 80px */
   background-color: var(--color-background-alt);
 }
 
@@ -7,73 +7,90 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 3.75rem; /* 60px */
   flex-wrap: wrap;
 }
 
 .imgSobre img {
-  width: 300px;
-  height: 300px;
+  width: 18.75rem; /* 300px */
+  height: 18.75rem;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.3); /* 15px */
 }
 
 .txtSobre {
-  max-width: 600px;
+  max-width: 37.5rem; /* 600px */
+  color: var(--color-text);
 }
 
 .txtSobre h2 {
-  font-size: 36px;
-  color: var(--color-text);
-  margin-bottom: 20px;
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+  margin-bottom: 1.875rem; /* 30px */
 }
 
 .txtSobre h2 span {
   color: var(--color-primary);
+  display: block;
 }
 
 .txtSobre p {
-  font-size: 16px;
-  color: var(--color-text);
-  margin-bottom: 20px;
+  font-size: 1rem; /* 16px */
+  margin: 1.25rem 0; /* 20px */
+  text-align: justify;
 }
 
 .btnSocial {
   display: flex;
-  gap: 15px;
+  gap: 1rem; /* 16px */
+  margin-top: 1rem;
 }
 
 .btnSocial button {
-  background-color: var(--color-primary);
-  border: none;
+  width: 3.75rem; /* 60px */
+  height: 3.75rem;
   border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btnSocial button i {
+  border: none;
+  background-color: var(--color-primary);
+  font-size: 1.375rem; /* 22px */
   color: #fff;
-  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btnSocial button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0.625rem var(--color-primary); /* 10px */
   background-color: var(--color-primary-dark);
 }
 
 /* Responsivo */
 @media screen and (max-width: 768px) {
   .imgSobre img {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem; /* 200px */
+    height: 12.5rem;
   }
 
   .txtSobre h2 {
-    font-size: 28px;
+    font-size: 1.75rem; /* 28px */
   }
 
   .txtSobre p {
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .btnSocial {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btnSocial button {
+    width: 3.125rem; /* 50px */
+    height: 3.125rem;
+    font-size: 1.25rem; /* 20px */
   }
 }
