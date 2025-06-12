@@ -10,13 +10,15 @@ const projetos = [
   {
     titulo: "iFestify",
     imagem: "/assets/projeto1.jpg",
-    descricao: "Projeto desenvolvido sobre demanda para apresentação de um produto.",
+    descricao:
+      "Projeto desenvolvido sobre demanda para apresentação de um produto.",
     link: "https://www.ifestify.com/",
   },
   {
     titulo: "ViaTopic",
     imagem: "/assets/projeto2.jpg",
-    descricao: "Projeto desenvolvido para auxiliar a população de Sobral e região.",
+    descricao:
+      "Projeto desenvolvido para auxiliar a população de Sobral e região.",
     link: "https://viatopic.netlify.app/",
   },
   {
@@ -33,10 +35,8 @@ const projetos = [
   },
 ];
 
-
 export default function CarrosselProjetos() {
   const swiperRef = useRef(null); // ✅ correto
-
 
   return (
     <section className={styles.portfolioSection} id="portfolio">
