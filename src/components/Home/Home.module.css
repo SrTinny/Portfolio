@@ -1,0 +1,63 @@
+.topoDoSite {
+  padding: 100px 4%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.txtTopoDoSite h1 {
+  color: var(--color-text);
+  font-size: 46px;
+  line-height: 40px;
+}
+
+.txtTopoDoSite h1 span {
+  color: var(--color-primary);
+}
+
+.txtTopoDoSite p {
+  color: var(--color-text);
+  margin: 40px 0px;
+}
+
+.imgTopoSite img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+/* Responsivo */
+@media screen and (max-width: 1020px) {
+  .topoDoSite {
+    padding: 20px 8%;
+  }
+
+  .flex {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .txtTopoDoSite h1 {
+    font-size: 30px;
+  }
+
+  .imgTopoSite img {
+    width: 300px;
+    height: 300px;
+  }
+}

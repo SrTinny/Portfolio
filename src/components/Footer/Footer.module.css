@@ -1,0 +1,59 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 4%;
+  text-align: center;
+  font-size: 14px;
+  border-top: 2px solid #2985c8;
+}
+
+.lineFooter {
+  padding: 20px 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logoFooter img {
+  display: block;
+}
+
+.btnSocial a button {
+  background-color: transparent;
+  border: 1px solid #2985c8;
+  color: var(--primary);
+  font-size: 18px;
+  margin: 0 5px;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnSocial a button:hover {
+  background-color: var(--primary);
+  color: #000;
+  box-shadow: 0 0 10px var(--primary-hover);
+}
+
+.borda {
+  border-top: 2px solid #2985c8;
+}
+
+.borda p {
+  margin-top: 10px;
+}
+
+.borda a {
+  color: var(--primary);
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.borda a:hover {
+  text-decoration: underline;
+}

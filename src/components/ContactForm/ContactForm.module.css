@@ -1,0 +1,55 @@
+.formulario {
+  padding: 40px 4%;
+  background-color: var(--color-background);
+}
+
+.titulo {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+  background-color: var(--color-input-bg, #fff);
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px var(--color-primary);
+}
+
+.btnEnviar {
+  text-align: center;
+}
+
+.btnEnviar input[type="submit"] {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnEnviar input[type="submit"]:hover {
+  background-color: var(--color-primary-hover, #005bb5);
+}
