@@ -33,6 +33,18 @@ const projetos = [
     descricao: "Site de aluguel e venda de imóveis.",
     link: "https://bootstrap-modelo.vercel.app/",
   },
+  {
+    titulo: "Imovi",
+    imagem: "/assets/projeto4.jpg",
+    descricao: "Site de aluguel e venda de imóveis.",
+    link: "https://bootstrap-modelo.vercel.app/",
+  },
+  {
+    titulo: "Imovi",
+    imagem: "/assets/projeto4.jpg",
+    descricao: "Site de aluguel e venda de imóveis.",
+    link: "https://bootstrap-modelo.vercel.app/",
+  },
 ];
 
 export default function CarrosselProjetos() {
@@ -73,7 +85,7 @@ export default function CarrosselProjetos() {
           breakpoints={{
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
-            1100: { slidesPerView: 3 },
+            1100: { slidesPerView: 4 },
           }}
           className={styles.carousel}
         >
