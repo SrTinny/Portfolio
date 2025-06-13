@@ -50,7 +50,6 @@ export default function Header() {
           ref={menuRef}
           className={`${styles.menuDesktop} ${menuAberto ? styles.open : ""}`}
         >
-
           <ul>
             <li>
               <a href="#home" onClick={fecharMenu}>
@@ -72,22 +71,25 @@ export default function Header() {
                 Projetos
               </a>
             </li>
+
+            <li>
+              <div className="btn-contato">
+                <a href="#form">
+                  <button>Contato</button>
+                </a>
+              </div>
+            </li>
           </ul>
         </nav>
 
         <div className={styles.toggleTheme}>
           <button className={styles.themeToggle} onClick={toggleTheme}>
             <i
-              className={`bi ${isLightMode ? "bi-moon-stars" : "bi-brightness-high"
-                }`}
+              className={`bi ${
+                isLightMode ? "bi-moon-stars" : "bi-brightness-high"
+              }`}
             ></i>
           </button>
-        </div>
-
-        <div className="btn-contato">
-          <a href="#form">
-            <button>Contato</button>
-          </a>
         </div>
 
         <div
