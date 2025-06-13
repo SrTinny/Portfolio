@@ -7,6 +7,14 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 2rem;
+  backdrop-filter: blur(10px); /* Fundo embaçado */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -38,6 +46,8 @@
 }
 
 .column ul {
+  display: flex;
+  gap: 1rem;
   list-style: none;
   padding: 0;
 }
@@ -46,7 +56,7 @@
   color: var(--color-text);
   text-decoration: none;
   opacity: 0.85;
-  transition: color 0.3s, opacity 0.3s;
+  transition: color 0.3s, opacity 0.3s;;
 }
 
 .column li a:hover {
