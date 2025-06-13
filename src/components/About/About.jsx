@@ -15,7 +15,7 @@ export default function About() {
               MUITO PRAZER, SOU<span> JOÃO VICTOR DUARTE.</span>
             </h2>
             <p>
-              Programador há mais de 10 anos e desenvolvedor web há 7, tenho uma
+              Programador há mais de 8 anos e desenvolvedor web há 5, tenho uma
               trajetória marcada pela união entre criatividade, funcionalidade e
               soluções sob medida. Estou me formando em Engenharia da Computação
               com ênfase em Engenharia de Software, o que fortalece minha
@@ -26,7 +26,7 @@ export default function About() {
               Já participei de iniciativas acadêmicas da Universidade Federal do
               Ceará, como a Biblioteca COVID e o portal FormaMus, além de ter
               atuado na área de TI de uma empresa de jogos. Atualmente, também
-              trabalho com móveis planejados e impressão 3D, ampliando minha
+              trabalho com móveis planejados e estudo impressão 3D, ampliando minha
               entrega para o design de interiores e fabricação personalizada.
             </p>
 
