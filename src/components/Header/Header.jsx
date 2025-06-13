@@ -48,10 +48,9 @@ export default function Header() {
 
         <nav
           ref={menuRef}
-          className={`${styles.menuDesktop} fullscreen ${
-            menuAberto ? styles.open : ""
-          }`}
+          className={`${styles.menuDesktop} ${menuAberto ? styles.open : ""}`}
         >
+
           <ul>
             <li>
               <a href="#home" onClick={fecharMenu}>
@@ -79,9 +78,8 @@ export default function Header() {
         <div className={styles.toggleTheme}>
           <button className={styles.themeToggle} onClick={toggleTheme}>
             <i
-              className={`bi ${
-                isLightMode ? "bi-moon-stars" : "bi-brightness-high"
-              }`}
+              className={`bi ${isLightMode ? "bi-moon-stars" : "bi-brightness-high"
+                }`}
             ></i>
           </button>
         </div>
