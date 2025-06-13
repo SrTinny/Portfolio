@@ -1,77 +1,140 @@
 .footer {
+  background-color: #060D18;
+  color: var(--color-text);
+  padding: 3rem 4%;
+  font-size: 0.875rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid var(--color-secondary);
+  padding-bottom: 2rem;
+}
+
+.column {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.column h2,
+.column h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+}
+
+.column p,
+.column ul,
+.column li {
+  margin: 0.25rem 0;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.column li a {
+  color: var(--color-text);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.column li a:hover {
+  color: var(--color-primary);
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.form input {
+  padding: 0.5rem;
+  border: 1px solid var(--color-secondary);
+  border-radius: 4px;
+  outline: none;
   background-color: var(--color-background);
   color: var(--color-text);
-  padding: 3.75rem 4%;
-  font-size: 0.875rem;
-  box-shadow: 0 0 20px 5px var(--color-secondary);
 }
 
-.lineFooter {
-  padding: 1.25rem 0;
+.form button {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.logoFooter {
-  flex-shrink: 0;
-}
-
-.logoImage {
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
+.form button:hover {
+  background-color: #004fa3; /* tom mais escuro do azul primário */
+  transform: scale(1.03);
 }
 
 .btnSocial {
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
 }
 
-.btnSocial a button {
-  background-color: transparent;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  font-size: 1.125rem;
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btnSocial a button:hover {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  box-shadow: 0 0 10px var(--color-primary-hover, #e68900);
-}
-
-.borda {
-  border-top: 2px solid var(--color-primary);
-  margin-top: 1rem;
-}
-
-.borda p {
-  margin-top: 0.625rem;
-}
-
-.borda p i {
-  color: var(--color-primary);
-  font-size: 1.375rem;
-}
-
-.borda p a {
+.btnSocial a {
   color: var(--color-text);
-  text-decoration: none;
-  margin-left: 0.5rem;
-  transition: color 0.3s ease;
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
-.borda p a:hover {
+.btnSocial a:hover {
   color: var(--color-primary);
-  text-decoration: underline;
+}
+
+.copy {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .btnSocial {
+    justify-content: flex-start;
+  }
+
+  .copy {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .form input,
+  .form button {
+    width: 100%;
+  }
 }
