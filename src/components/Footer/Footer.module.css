@@ -1,14 +1,13 @@
 .footer {
   background-color: var(--color-background);
   color: var(--color-text);
-  padding: 3.75rem 4%; /* 60px */
-  text-align: center;
-  font-size: 0.875rem; /* 14px */
+  padding: 3.75rem 4%;
+  font-size: 0.875rem;
   box-shadow: 0 0 20px 5px var(--color-secondary);
 }
 
 .lineFooter {
-  padding: 1.25rem 0; /* 20px */
+  padding: 1.25rem 0;
 }
 
 .flex {
@@ -16,22 +15,30 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.logoFooter img {
-  display: block;
-  width: 4.375rem; /* 70px */
-  height: 4.375rem;
+.logoFooter {
+  flex-shrink: 0;
+}
+
+.logoImage {
   border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.btnSocial {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .btnSocial a button {
   background-color: transparent;
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
-  font-size: 1.125rem; /* 18px */
-  margin: 0 0.3125rem; /* 5px */
-  padding: 0.5rem; /* 8px */
+  font-size: 1.125rem;
+  padding: 0.5rem;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
@@ -45,21 +52,22 @@
 
 .borda {
   border-top: 2px solid var(--color-primary);
+  margin-top: 1rem;
 }
 
 .borda p {
-  margin-top: 0.625rem; /* 10px */
+  margin-top: 0.625rem;
 }
 
 .borda p i {
   color: var(--color-primary);
-  font-size: 1.375rem; /* 22px */
+  font-size: 1.375rem;
 }
 
 .borda p a {
   color: var(--color-text);
   text-decoration: none;
-  margin-left: 0.3125rem;
+  margin-left: 0.5rem;
   transition: color 0.3s ease;
 }
 

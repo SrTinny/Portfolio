@@ -8,16 +8,26 @@ export default function Footer() {
           <div className={styles.flex}>
             <div className={styles.logoFooter}>
               <img
-                src="/images/logo.jpg"
+                src="../../assets/logo.jpg"
                 alt="Logo da Tinny DEV"
-                style={{ width: 70, height: 70, borderRadius: '50%' }}
+                width={70}
+                height={70}
+                className={styles.logoImage}
               />
             </div>
             <div className={styles.btnSocial}>
-              <a href="#"><button><i className="bi bi-instagram"></i></button></a>
-              <a href="#"><button><i className="bi bi-youtube"></i></button></a>
-              <a href="#"><button><i className="bi bi-linkedin"></i></button></a>
-              <a href="#"><button><i className="bi bi-github"></i></button></a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <button><i className="bi bi-instagram"></i></button>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <button><i className="bi bi-youtube"></i></button>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <button><i className="bi bi-linkedin"></i></button>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <button><i className="bi bi-github"></i></button>
+              </a>
             </div>
           </div>
         </div>
