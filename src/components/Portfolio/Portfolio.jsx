@@ -33,27 +33,33 @@ const projetos = [
     descricao: "Site de aluguel e venda de imóveis.",
     link: "https://bootstrap-modelo.vercel.app/",
   },
-  {
-    titulo: "Imovi",
-    imagem: "/assets/projeto4.jpg",
-    descricao: "Site de aluguel e venda de imóveis.",
-    link: "https://bootstrap-modelo.vercel.app/",
+    {
+    titulo: "Portifólio",
+    imagem: "/assets/projeto3.jpg",
+    descricao: "Modelo de portfólio interativo.",
+    link: "https://portifolio-self-ten-43.vercel.app/",
   },
-  {
-    titulo: "Imovi",
-    imagem: "/assets/projeto4.jpg",
-    descricao: "Site de aluguel e venda de imóveis.",
-    link: "https://bootstrap-modelo.vercel.app/",
+    {
+    titulo: "Portifólio",
+    imagem: "/assets/projeto3.jpg",
+    descricao: "Modelo de portfólio interativo.",
+    link: "https://portifolio-self-ten-43.vercel.app/",
+  },
+    {
+    titulo: "Portifólio",
+    imagem: "/assets/projeto3.jpg",
+    descricao: "Modelo de portfólio interativo.",
+    link: "https://portifolio-self-ten-43.vercel.app/",
   },
 ];
 
 export default function CarrosselProjetos() {
-  const swiperRef = useRef(null); // ✅ correto
+  const swiperRef = useRef(null);
 
   return (
     <section className={styles.portfolioSection} id="portfolio">
       <h2 className={styles.titulo}>
-        Nossos <span>Projetos</span>
+        MEUS <span>SITES.</span>
       </h2>
 
       <div
