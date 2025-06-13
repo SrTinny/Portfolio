@@ -15,15 +15,27 @@ export default function About() {
               MUITO PRAZER, SOU<span> JOÃO VICTOR DUARTE.</span>
             </h2>
             <p>
-              Desenvolvedor full stack apaixonado por tecnologia e inovação. Com
-              experiência em projetos web e mobile, busco sempre aprimorar meus
-              conhecimentos e entregar soluções criativas e eficientes.
+              Programador há mais de 10 anos e desenvolvedor web há 7, tenho uma
+              trajetória marcada pela união entre criatividade, funcionalidade e
+              soluções sob medida. Estou me formando em Engenharia da Computação
+              com ênfase em Engenharia de Software, o que fortalece minha
+              atuação prática com base acadêmica sólida.
             </p>
+
             <p>
-              Atuo com tecnologias como React, Node.js, Java, Python e muito
-              mais. Acredito na colaboração e na aprendizagem contínua como
-              chave para o sucesso.
+              Já participei de iniciativas acadêmicas da Universidade Federal do
+              Ceará, como a Biblioteca COVID e o portal FormaMus, além de ter
+              atuado na área de TI de uma empresa de jogos. Atualmente, também
+              trabalho com móveis planejados e impressão 3D, ampliando minha
+              entrega para o design de interiores e fabricação personalizada.
             </p>
+
+            <p>
+              Sou fundador da DevHub, uma startup voltada para o desenvolvimento
+              de soluções inovadoras. Estou sempre em busca de novos desafios,
+              ideias e parcerias que inspirem evolução.
+            </p>
+
             <div className={styles.btnSocial}>
               <a href="#">
                 <button>
