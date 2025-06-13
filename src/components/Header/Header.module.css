@@ -40,12 +40,12 @@ header nav ul li {
   padding: 0px 40px;
 }
 
-.toggle-theme {
+.menuToggle {
   display: flex;
   align-items: center;
 }
 
-#theme-toggle {
+.togleTheme {
   background: none;
   border: none;
   cursor: pointer;

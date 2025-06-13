@@ -4,23 +4,24 @@
 
 /* Variáveis de cores */
 :root {
-  --color-background: rgb(37, 36, 36);
-  --color-text: #eaeaea;
-  --color-primary: #fd9800;
-  --color-secondary: #9b9b9b;
-  --color-overlay: rgba(0, 0, 0, 0.582);
-  --color-dark-overlay: rgba(0, 0, 0, 0.7);
+  --color-background: #0d1117;           /* fundo preto-azulado */
+  --color-text: #c9d1d9;                 /* texto claro */
+  --color-primary: #2f81f7;              /* azul principal (GitHub-like) */
+  --color-secondary: #8b949e;            /* cinza-azulado suave */
+  --color-overlay: rgba(13, 17, 23, 0.8); /* sobreposição escura */
+  --color-dark-overlay: rgba(13, 17, 23, 0.95); /* sobreposição mais densa */
 }
 
 /* Tema claro */
 .light-mode {
-  --color-background: #ffffff;
-  --color-text: #333333;
-  --color-primary: #fd9800;
-  --color-secondary: #666666;
-  --color-overlay: rgba(255, 255, 255, 0.8);
-  --color-dark-overlay: rgba(255, 255, 255, 0.7);
+  --color-background: #f0f6fc;           /* fundo claro com tom azulado */
+  --color-text: #0d1117;                 /* texto escuro */
+  --color-primary: #0969da;              /* azul claro vibrante */
+  --color-secondary: #57606a;            /* cinza moderno */
+  --color-overlay: rgba(240, 246, 252, 0.8);
+  --color-dark-overlay: rgba(240, 246, 252, 0.9);
 }
+
 
 * {
   margin: 0;
