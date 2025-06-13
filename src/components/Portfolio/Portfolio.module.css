@@ -5,7 +5,7 @@
   background-color: var(--color-background);
   color: var(--color-text);
   box-shadow: 0 0 1.25rem 0.3125rem var(--color-secondary); /* 20px 5px */
-  z-index: 1;
+  z-index: 0;
 }
 
 .titulo {

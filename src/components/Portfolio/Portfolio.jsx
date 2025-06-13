@@ -8,11 +8,11 @@ import styles from "./Portfolio.module.css";
 
 const projetos = [
   {
-    titulo: "iFestify",
-    imagem: "/assets/projeto1.jpg",
+    titulo: "DevHub",
+    imagem: "/assets/devhub.png",
     descricao:
-      "Projeto desenvolvido sobre demanda para apresentação de um produto.",
-    link: "https://www.ifestify.com/",
+      "Site da minha startup.",
+    link: "https://devhub-lake.vercel.app/",
   },
   {
     titulo: "ViaTopic",
@@ -32,24 +32,6 @@ const projetos = [
     imagem: "/assets/projeto4.jpg",
     descricao: "Site de aluguel e venda de imóveis.",
     link: "https://bootstrap-modelo.vercel.app/",
-  },
-    {
-    titulo: "Portifólio",
-    imagem: "/assets/projeto3.jpg",
-    descricao: "Modelo de portfólio interativo.",
-    link: "https://portifolio-self-ten-43.vercel.app/",
-  },
-    {
-    titulo: "Portifólio",
-    imagem: "/assets/projeto3.jpg",
-    descricao: "Modelo de portfólio interativo.",
-    link: "https://portifolio-self-ten-43.vercel.app/",
-  },
-    {
-    titulo: "Portifólio",
-    imagem: "/assets/projeto3.jpg",
-    descricao: "Modelo de portfólio interativo.",
-    link: "https://portifolio-self-ten-43.vercel.app/",
   },
 ];
 
