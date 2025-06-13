@@ -1,3 +1,68 @@
+/* Estrutura base */
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--color-background);
+}
+
+.interface {
+  padding: 0.5rem 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo img {
+  width: 3.75rem; /* 60px */
+  height: 3.75rem;
+  border-radius: 50%;
+}
+
+/* Navegação Desktop */
+.menuDesktop ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuDesktop li {
+  display: inline-block;
+  padding: 0 2.5rem;
+}
+
+.menuDesktop a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuDesktop a:hover {
+  color: var(--color-text);
+  transform: scale(1.05);
+}
+
+/* Botão de tema */
+.toggleTheme {
+  display: flex;
+  align-items: center;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  transition: transform 0.3s ease-in-out;
+}
+
+.themeToggle:hover {
+  transform: scale(1.1);
+}
+
+/* Menu mobile toggle */
 .menuToggle {
   display: none;
   font-size: 2rem;
@@ -5,55 +70,18 @@
   cursor: pointer;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-}
+/* Responsividade (exemplo) */
+@media (max-width: 1024px) {
+  .interface {
+    padding: 0.5rem 2rem;
+  }
 
-header > .interface {
-  padding: 0.5rem 16rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--color-background);
-}
+  .menuToggle {
+    display: flex;
+    align-items: center;
+  }
 
-header a {
-  color: var(--color-secondary);
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease-in-out;
-}
-
-header a:hover {
-  color: var(--color-text);
-  transform: scale(1.05);
-}
-
-header nav ul {
-  list-style-type: none;
-}
-
-header nav ul li {
-  display: inline-block;
-  padding: 0px 40px;
-}
-
-.menuToggle {
-  display: flex;
-  align-items: center;
-}
-
-.togleTheme {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: var(--color-text);
-  transition: transform 0.3s ease-in-out;
-}
-
-#theme-toggle:hover {
-  transform: scale(1.1);
+  .menuDesktop {
+    display: none;
+  }
 }

@@ -32,7 +32,7 @@ export default function Header() {
         </nav>
 
         <div className={styles.toggleTheme}>
-          <button id="theme-toggle">
+          <button className={styles.themeToggle}>
             <i className="bi bi-brightness-high"></i>
           </button>
         </div>
