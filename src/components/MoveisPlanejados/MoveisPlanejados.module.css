@@ -1,11 +1,25 @@
 .page {
   width: 100vw;
-  height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0a0a23;
+  height: 90vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
   position: relative;
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  z-index: 0;
 }
+
+.titulo {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.titulo span {
+  color: var(--color-primary);
+}
+
 
 .background {
   position: absolute;
@@ -21,24 +35,6 @@
   z-index: 1;
 }
 
-.backButton {
-  position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
-  z-index: 3;
-  text-decoration: none;
-  font-size: 2rem;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.625rem 1rem;
-  border-radius: 50%;
-  transition: background-color 0.3s;
-}
-
-.backButton:hover {
-  background-color: #007aff;
-}
-
 .content {
   position: absolute;
   top: 45%;
@@ -46,29 +42,32 @@
   transform: translate(-50%, -50%);
   z-index: 3;
   text-align: center;
-  color: #ffffff;
 }
 
 .content h1 {
-  font-size: 2.25rem;
+  font-size: 2.375rem; /* 38px */
   letter-spacing: 0.125rem;
   margin-bottom: 1.25rem;
+  color: var(--color-text);
+  font-weight: 700;
 }
 
 .whatsappButton {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #007aff;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-background);
   border-radius: 2rem;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  font-weight: 600;
   font-size: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .whatsappButton:hover {
   background-color: #005bb5;
+  box-shadow: 0 0 0.5rem var(--color-primary);
+  transform: scale(1.05);
 }
 
 .thumbnails {
@@ -82,13 +81,13 @@
 }
 
 .thumbnails img {
-  width: 6.25rem;
-  height: 4.375rem;
+  width: 6.25rem;   /* 100px */
+  height: 4.375rem; /* 70px */
   object-fit: cover;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: transform 0.3s, filter 0.3s;
-  border: 2px solid #fff;
+  border: 2px solid var(--color-text);
 }
 
 .thumbnails img:hover {

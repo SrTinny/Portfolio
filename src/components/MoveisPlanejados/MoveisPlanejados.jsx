@@ -19,10 +19,8 @@ export default function MoveisPlanejados() {
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
 
-      <a href="#" className={styles.backButton}>←</a>
-
       <div className={styles.content}>
-        <h1>MÓVEIS PLANEJADOS</h1>
+        <h2 className={styles.titulo}>MÓVEIS <span>PLANEJADOS.</span></h2>
         <a
           className={styles.whatsappButton}
           href="https://wa.me/5588998562665"
