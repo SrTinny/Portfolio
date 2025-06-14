@@ -9,18 +9,6 @@
   z-index: 0;
 }
 
-.titulo {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--color-text);
-}
-
-.titulo span {
-  color: var(--color-primary);
-}
-
-
 .background {
   position: absolute;
   top: 0;
@@ -35,21 +23,24 @@
   z-index: 1;
 }
 
+.titulo {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.titulo span {
+  color: var(--color-primary);
+}
+
 .content {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
   text-align: center;
-}
-
-.content h1 {
-  font-size: 2.375rem; /* 38px */
-  letter-spacing: 0.125rem;
-  margin-bottom: 1.25rem;
-  color: var(--color-text);
-  font-weight: 700;
 }
 
 .whatsappButton {
@@ -70,35 +61,32 @@
   transform: scale(1.05);
 }
 
-.thumbnails {
+.sliderContainer {
   position: absolute;
-  bottom: 1.875rem;
+  bottom: 2rem;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 1.25rem;
+  padding: 0 2rem;
   z-index: 2;
 }
 
-.thumbnails img {
-  width: 6.25rem;   /* 100px */
-  height: 4.375rem; /* 70px */
+.carousel img {
+  width: 100%;
+  height: 6.25rem;
   object-fit: cover;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: transform 0.3s, filter 0.3s;
   border: 2px solid var(--color-text);
+  transition: transform 0.3s, filter 0.3s;
 }
 
-.thumbnails img:hover {
+.carousel img:hover {
   transform: scale(1.1);
   filter: brightness(1.2);
 }
 
-
 @media (max-width: 768px) {
-  .content h1 {
-    font-size: 1.875rem; /* 30px */
+  .titulo {
+    font-size: 2rem;
   }
 
   .whatsappButton {
@@ -106,19 +94,7 @@
     font-size: 0.9rem;
   }
 
-  .backButton {
-    font-size: 1.5rem;
-    padding: 0.5rem 0.75rem;
-  }
-
-  .thumbnails {
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    padding: 0 1rem;
-  }
-
-  .thumbnails img {
-    width: 5rem;
+  .carousel img {
     height: 3.5rem;
   }
 }
