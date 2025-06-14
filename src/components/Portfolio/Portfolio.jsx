@@ -15,21 +15,21 @@ const projetos = [
     link: "https://devhub-lake.vercel.app/",
   },
   {
-    titulo: "ViaTopic",
-    imagem: "/assets/projeto2.jpg",
+    titulo: "HidroWatts",
+    imagem: "/assets/hidrowatts.png",
     descricao:
-      "Projeto desenvolvido para auxiliar a população de Sobral e região.",
+      "Projeto desenvolvido.",
     link: "https://viatopic.netlify.app/",
   },
   {
-    titulo: "Portifólio",
-    imagem: "/assets/projeto3.jpg",
-    descricao: "Modelo de portfólio interativo.",
+    titulo: "Tela de Login | lol",
+    imagem: "/assets/teladeloginlol.png",
+    descricao: "Modelo de tela de login inspirado no LoL.",
     link: "https://portifolio-self-ten-43.vercel.app/",
   },
   {
     titulo: "Imovi",
-    imagem: "/assets/projeto4.jpg",
+    imagem: "/assets/imovi.png",
     descricao: "Site de aluguel e venda de imóveis.",
     link: "https://bootstrap-modelo.vercel.app/",
   },
