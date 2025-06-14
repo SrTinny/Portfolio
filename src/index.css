@@ -8,6 +8,7 @@
   --color-secondary: #8b949e;
   --color-overlay: rgba(13, 17, 23, 0.8);
   --color-dark-overlay: rgba(13, 17, 23, 0.95);
+  --color-test1: #060D18;
 }
 
 /* Tema claro */
@@ -18,6 +19,7 @@
   --color-secondary: #57606a;
   --color-overlay: rgba(240, 246, 252, 0.8);
   --color-dark-overlay: rgba(240, 246, 252, 0.9);
+  --color-test1: #f6f8fa;
 }
 
 * {
