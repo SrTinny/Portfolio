@@ -22,7 +22,7 @@ export default function MoveisPlanejados() {
   const [backgroundImage, setBackgroundImage] = useState(imagens[0]);
 
   return (
-    <div className={styles.page}>
+    <section id="moveis" className={styles.page}>
       <div
         className={styles.background}
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -70,6 +70,6 @@ export default function MoveisPlanejados() {
           ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 }

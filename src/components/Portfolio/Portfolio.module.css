@@ -4,7 +4,6 @@
   margin: 2.25rem auto;
   background-color: var(--color-background);
   color: var(--color-text);
-  box-shadow: 0 0 1.25rem 0.3125rem var(--color-secondary); /* 20px 5px */
   z-index: 0;
 }
 
