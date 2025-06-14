@@ -94,3 +94,31 @@
   transform: scale(1.1);
   filter: brightness(1.2);
 }
+
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 1.875rem; /* 30px */
+  }
+
+  .whatsappButton {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .backButton {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .thumbnails {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .thumbnails img {
+    width: 5rem;
+    height: 3.5rem;
+  }
+}
