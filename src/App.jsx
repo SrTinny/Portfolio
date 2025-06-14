@@ -10,6 +10,7 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import { useEffect } from 'react'
+import MoveisPlanejados from './components/MoveisPlanejados/MoveisPlanejados'
 
 export default function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function App() {
         <Skills />
         <About />
         <Portfolio />
+        <MoveisPlanejados />
         <ContactForm />
       </main>
       <Footer />
