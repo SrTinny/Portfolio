@@ -70,3 +70,7 @@ form .btn-enviar input:hover {
   box-shadow: 0rem 0rem 0.5rem var(--color-primary); /* 8px */
   transform: scale(1.05);
 }
+
+p {
+  line-height: 1.8rem;
+}

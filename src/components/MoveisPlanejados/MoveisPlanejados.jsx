@@ -8,14 +8,15 @@ const imagens = [
   "/assets/moveis1.png",
   "/assets/moveis2.png",
   "/assets/moveis3.png",
+  "/assets/moveis4.png",
+  "/assets/moveis5.png",
+  "/assets/moveis6.png",
   "/assets/moveis1.png",
   "/assets/moveis2.png",
   "/assets/moveis3.png",
-  "/assets/moveis1.png",
-  "/assets/moveis2.png",
-  "/assets/moveis3.png",
-  "/assets/moveis1.png",
-  "/assets/moveis2.png",
+  "/assets/moveis4.png",
+  "/assets/moveis5.png",
+  "/assets/moveis6.png",
 ];
 
 export default function MoveisPlanejados() {
