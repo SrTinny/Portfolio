@@ -1,24 +1,24 @@
 // src/components/Portfolio/Portfolio.jsx
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import { Swiper as SwiperClass } from "swiper";
+// 1. Importe o Navigation junto com o Autoplay
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
+// 2. (Opcional, mas recomendado) Importe o CSS da navegação
+import "swiper/css/navigation";
 import styles from "./Portfolio.module.css";
 
 const projetos = [
   {
     titulo: "DevHub",
     imagem: "/assets/devhub.png",
-    descricao:
-      "Site da minha startup.",
+    descricao: "Site da minha startup.",
     link: "https://devhub-lake.vercel.app/",
   },
   {
     titulo: "HidroWatts",
     imagem: "/assets/hidrowatts.png",
-    descricao:
-      "Projeto desenvolvido.",
+    descricao: "Projeto desenvolvido.",
     link: "https://viatopic.netlify.app/",
   },
   {
@@ -28,6 +28,12 @@ const projetos = [
     link: "https://portifolio-self-ten-43.vercel.app/",
   },
   {
+    titulo: "Imovi",
+    imagem: "/assets/imovi.png",
+    descricao: "Site de aluguel e venda de imóveis.",
+    link: "https://bootstrap-modelo.vercel.app/",
+  },
+    {
     titulo: "Imovi",
     imagem: "/assets/imovi.png",
     descricao: "Site de aluguel e venda de imóveis.",
@@ -63,7 +69,8 @@ export default function CarrosselProjetos() {
         </button>
 
         <Swiper
-          modules={[Autoplay]}
+          // 3. Registre o módulo Navigation aqui
+          modules={[Autoplay, Navigation]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={1}
           spaceBetween={20}

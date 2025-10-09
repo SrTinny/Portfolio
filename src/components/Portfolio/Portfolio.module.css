@@ -4,7 +4,6 @@
   margin: 2.25rem auto;
   background-color: var(--color-background);
   color: var(--color-text);
-  z-index: 0;
 }
 
 .titulo {
@@ -24,7 +23,10 @@
 
 .carousel {
   padding-bottom: 2.5rem; /* 40px */
+  width: 100%;            /* <<< ADICIONE ESTA LINHA */
+  overflow: hidden;       /* <<< ADICIONE ESTA LINHA */
 }
+
 
 .imgPort {
   width: 100%;

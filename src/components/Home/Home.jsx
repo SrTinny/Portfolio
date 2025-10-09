@@ -1,6 +1,6 @@
 // src/components/Home/Home.jsx
 import styles from "./Home.module.css";
-import imagemTopo from "../../assets/logo.jpg";
+import imagemTopo from "../../assets/logo.png";
 
 export default function Home() {
   return (
@@ -25,6 +25,7 @@ export default function Home() {
 
           <div className="btn-contato">
             <a href="#form">
+
               <button>Entre em contato</button>
             </a>
           </div>

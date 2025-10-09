@@ -71,11 +71,6 @@ export default function Header() {
                 Projetos
               </a>
             </li>
-            <li>
-              <a href="#moveis" onClick={fecharMenu}>
-                Modelagem
-              </a>
-            </li>
 
             <li>
               <div className="btn-contato">
