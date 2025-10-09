@@ -2,16 +2,18 @@
 import styles from './Skills.module.css';
 
 const skills = [
-  { name: 'Java', icon: 'java/java-original.svg' },
-  { name: 'Git', icon: 'git/git-original.svg' },
+  { name: 'JavaScript', icon: 'javascript/javascript-original.svg' },
+  { name: 'TypeScript', icon: 'typescript/typescript-original.svg' },
   { name: 'React', icon: 'react/react-original.svg' },
-  { name: 'PHP', icon: 'php/php-original.svg' },
-  { name: 'SQL', icon: 'azuresqldatabase/azuresqldatabase-original.svg' },
-  { name: 'Node', icon: 'nodejs/nodejs-original.svg' },
-  { name: 'Bootstrap', icon: 'bootstrap/bootstrap-original.svg' },
-  { name: 'JavaScript', icon: 'javascript/javascript-plain.svg' },
-  { name: 'C', icon: 'c/c-original.svg' },
+  { name: 'Next.js', icon: 'nextjs/nextjs-original.svg' },
+  { name: 'Node.js', icon: 'nodejs/nodejs-original.svg' },
   { name: 'Python', icon: 'python/python-original.svg' },
+  { name: 'Flutter', icon: 'flutter/flutter-original.svg' },
+  { name: 'PostgreSQL', icon: 'postgresql/postgresql-original.svg' },
+  { name: 'Prisma', icon: 'prisma/prisma-original.svg' },
+  { name: 'Tailwind CSS', icon: 'tailwindcss/tailwindcss-original.svg' },
+  { name: 'Docker', icon: 'docker/docker-original.svg' },
+  { name: 'Git', icon: 'git/git-original.svg' },
 ];
 
 export default function Skills() {
