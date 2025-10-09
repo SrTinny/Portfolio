@@ -15,27 +15,24 @@ export default function About() {
               MUITO PRAZER, SOU<span> JOÃO VICTOR DUARTE.</span>
             </h2>
             <p>
-              Programador há mais de 8 anos e desenvolvedor web há 5, tenho uma
-              trajetória marcada pela união entre criatividade, funcionalidade e
-              soluções sob medida. Estou me formando em Engenharia da Computação
-              com ênfase em Engenharia de Software, o que fortalece minha
-              atuação prática com base acadêmica sólida.
+              Com mais de 8 anos de experiência em programação e 5 anos
+              dedicados ao desenvolvimento web, minha paixão é construir
+              soluções digitais que sejam criativas, funcionais e intuitivas.
+              Sou um entusiasta de tecnologia e graduando em Engenharia da
+              Computação, o que me dá uma base sólida para unir teoria e
+              prática, transformando desafios complexos em produtos de alta
+              qualidade.
             </p>
-
             <p>
-              Já participei de iniciativas acadêmicas da Universidade Federal do
-              Ceará, como a Biblioteca COVID e o portal FormaMus, além de ter
-              atuado na área de TI de uma empresa de jogos. Atualmente, também
-              trabalho com móveis planejados e estudo impressão 3D, ampliando minha
-              entrega para o design de interiores e fabricação personalizada.
+              Minha jornada inclui a participação em projetos de impacto na
+              Universidade Federal do Ceará, como a Biblioteca COVID e o portal
+              FormaMus.
             </p>
-
             <p>
-              Sou fundador da DevHub, uma startup voltada para o desenvolvimento
-              de soluções inovadoras. Estou sempre em busca de novos desafios,
-              ideias e parcerias que inspirem evolução.
+              Estou sempre em busca de novos desafios, colaborações e parcerias
+              que impulsionem a evolução tecnológica. Vamos construir o futuro,
+              juntos?
             </p>
-
             <div className={styles.btnSocial}>
               <a href="#">
                 <button>
