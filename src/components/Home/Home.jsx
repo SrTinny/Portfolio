@@ -8,24 +8,23 @@ export default function Home() {
       <div className={`interface ${styles.flex}`}>
         <div className={styles.txtTopoDoSite}>
           <h1>
-            CRIATIVIDADE EM EXPERIÊNCIAS DIGITAIS<span>.</span>
+            TRANSFORMANDO IDEIAS EM SOLUÇÕES DIGITAIS<span>.</span>
           </h1>
           <p>
-            Seja bem-vindo. Este espaço foi criado para oferecer soluções
-            profissionais e versáteis nas áreas de desenvolvimento web, design
-            de interiores e mobiliário planejado. Aqui você encontra serviços
-            completos de criação de sites — como landing pages, portfólios,
-            e-commerces e sistemas personalizados — desenvolvidos com foco em
-            performance, estética e funcionalidade. Também atuo com projetos de
-            interiores e fabricação de móveis sob medida, integrando tecnologia
-            e design para transformar ambientes. Também trabalho com novas
-            possibilidades na área da impressão 3D, expandindo ainda mais nossa
-            capacidade de materializar ideias. Explore as possibilidades e
-            descubra como podemos construir algo único para você.
+            Sou um desenvolvedor full-stack focado em transformar conceitos em
+            realidade digital. Minha especialidade é construir aplicações web
+            completas e sob medida, que unem design funcional, performance e uma
+            ótima experiência de usuário.
+            <br />
+            <br />
+            Desde landing pages e portfólios interativos até sistemas complexos
+            e e-commerces, meu objetivo é entregar soluções eficientes e
+            escaláveis, utilizando as tecnologias mais modernas do mercado.
+            Vamos construir algo incrível juntos?
           </p>
 
           <div className="btn-contato">
-            <a href="#">
+            <a href="#form">
               <button>Entre em contato</button>
             </a>
           </div>
