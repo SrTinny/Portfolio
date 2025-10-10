@@ -22,23 +22,37 @@ const projetos = [
     link: "https://viatopic.netlify.app/",
   },
   {
-    titulo: "Tela de Login | lol",
-    imagem: "/assets/teladeloginlol.png",
-    descricao: "Modelo de tela de login inspirado no LoL.",
-    link: "https://portifolio-self-ten-43.vercel.app/",
-  },
-  {
     titulo: "Imovi",
     imagem: "/assets/imovi.png",
     descricao: "Site de aluguel e venda de imóveis.",
     link: "https://bootstrap-modelo.vercel.app/",
   },
     {
-    titulo: "Imovi",
-    imagem: "/assets/imovi.png",
-    descricao: "Site de aluguel e venda de imóveis.",
-    link: "https://bootstrap-modelo.vercel.app/",
+    titulo: "GRID conf",
+    imagem: "/assets/gridconf.png",
+    descricao: "Modelo de site para conferência de tecnologia.",
+    link: "https://gridconf.vercel.app/",
   },
+    {
+    titulo: "LEX Partners",
+    imagem: "/assets/lexpartners.png",
+    descricao: "Modelo de site para escritório de advocacia.",
+    link: "https://lexpartners.vercel.app/",
+  },
+    {
+    titulo: "Atelier Vita",
+    imagem: "/assets/ateliervita.png",
+    descricao: "Modelo de site para ateliê de costura.",
+    link: "https://ateliervita.vercel.app/",
+  },
+    {
+    titulo: "Aura AI",
+    imagem: "/assets/auraai.png",
+    descricao: "Modelo de site para empresa de IA.",
+    link: "https://auraai-woad.vercel.app/",
+  },
+
+ 
 ];
 
 export default function CarrosselProjetos() {
