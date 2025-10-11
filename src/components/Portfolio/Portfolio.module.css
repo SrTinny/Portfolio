@@ -4,6 +4,7 @@
   margin: 2.25rem auto;
   background-color: var(--color-background);
   color: var(--color-text);
+  z-index: 0;
 }
 
 .titulo {

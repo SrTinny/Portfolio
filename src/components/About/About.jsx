@@ -34,17 +34,17 @@ export default function About() {
               juntos?
             </p>
             <div className={styles.btnSocial}>
-              <a href="#">
+              <a href="https://github.com/SrTinny">
                 <button>
                   <i className="bi bi-github"></i>
                 </button>
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/joao-victor-duarte-0b0bbb240/">
                 <button>
                   <i className="bi bi-linkedin"></i>
                 </button>
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/victor.arteng/">
                 <button>
                   <i className="bi bi-instagram"></i>
                 </button>
