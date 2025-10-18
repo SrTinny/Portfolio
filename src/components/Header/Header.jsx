@@ -4,100 +4,93 @@ import styles from "./Header.module.css";
 import logo from "../../assets/logo.jpg";
 import useThemeToggle from "../../hooks/useThemeToggle";
 
+// 1. Abstrair os links para um array de objetos
+const navLinks = [
+  { href: "#home", text: "Início" },
+  { href: "#skills", text: "Especialidades" },
+  { href: "#about", text: "Sobre" },
+  { href: "#portfolio", text: "Projetos" },
+];
+
 export default function Header() {
   const { isLightMode, toggleTheme } = useThemeToggle();
-  const [menuAberto, setMenuAberto] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const toggleRef = useRef(null);
 
-  const alternarMenu = () => {
-    setMenuAberto((prev) => !prev);
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
   };
 
-  // Fechar menu ao clicar fora
   useEffect(() => {
-    function handleClickFora(event) {
+    const handleClickOutside = (event) => {
       if (
-        menuAberto &&
+        isMenuOpen &&
         menuRef.current &&
-        toggleRef.current &&
         !menuRef.current.contains(event.target) &&
+        toggleRef.current &&
         !toggleRef.current.contains(event.target)
       ) {
-        setMenuAberto(false);
+        setIsMenuOpen(false);
       }
-    }
+    };
 
-    document.addEventListener("mousedown", handleClickFora);
-    return () => document.removeEventListener("mousedown", handleClickFora);
-  }, [menuAberto]);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMenuOpen]);
 
-  // Fechar menu ao clicar em um link
-  const fecharMenu = () => setMenuAberto(false);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className={styles.header}>
       <div className={styles.interface}>
-        <a href="#" className={styles.logo}>
+        <a href="#home" className={styles.logo} onClick={closeMenu}>
           <img
             src={logo}
-            alt="Logo"
-            style={{ width: 60, height: 60, borderRadius: "50%" }}
+            alt="Logo de João Victor Duarte"
+            className={styles.logoImage}
           />
         </a>
 
         <nav
           ref={menuRef}
-          className={`${styles.menuDesktop} ${menuAberto ? styles.open : ""}`}
+          className={`${styles.menuNav} ${isMenuOpen ? styles.open : ""}`}
         >
           <ul>
-            <li>
-              <a href="#home" onClick={fecharMenu}>
-                Início
-              </a>
-            </li>
-            <li>
-              <a href="#skills" onClick={fecharMenu}>
-                Especialidades
-              </a>
-            </li>
-            <li>
-              <a href="#about" onClick={fecharMenu}>
-                Sobre
-              </a>
-            </li>
-            <li>
-              <a href="#portfolio" onClick={fecharMenu}>
-                Projetos
-              </a>
-            </li>
-
-            <li>
-              <div className="btn-contato">
-                <a href="#form">
-                  <button>Contato</button>
+            {/* 2. Mapear os links dinamicamente */}
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} onClick={closeMenu}>
+                  {link.text}
                 </a>
-              </div>
-            </li>
+              </li>
+            ))}
           </ul>
+          {/* 3. Botão de contato estilizado como link */}
+          <a href="#form" className={styles.contactButton} onClick={closeMenu}>
+            Contato
+          </a>
         </nav>
 
-        <div className={styles.toggleTheme}>
-          <button className={styles.themeToggle} onClick={toggleTheme}>
-            <i
-              className={`bi ${
-                isLightMode ? "bi-moon-stars" : "bi-brightness-high"
-              }`}
-            ></i>
+        <div className={styles.actions}>
+          <button
+            className={styles.themeToggle}
+            onClick={toggleTheme}
+            aria-label={`Ativar modo ${isLightMode ? 'escuro' : 'claro'}`} // Acessibilidade
+          >
+            <i className={`bi ${isLightMode ? "bi-moon-stars" : "bi-brightness-high"}`}></i>
           </button>
-        </div>
 
-        <div
-          className={styles.menuToggle}
-          ref={toggleRef}
-          onClick={alternarMenu}
-        >
-          <i className={`bi ${menuAberto ? "bi-x" : "bi-list"}`}></i>
+          {/* 4. Usar <button> para o toggle do menu */}
+          <button
+            className={styles.menuToggle}
+            ref={toggleRef}
+            onClick={toggleMenu}
+            aria-label="Abrir menu"
+            aria-expanded={isMenuOpen} // Acessibilidade
+          >
+            <i className={`bi ${isMenuOpen ? "bi-x" : "bi-list"}`}></i>
+          </button>
         </div>
       </div>
     </header>
