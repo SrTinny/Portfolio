@@ -1,5 +1,18 @@
-.topoDoSite {
+/* src/components/Home/Home.module.css */
+
+.hero {
   padding: 6.25rem 4%;
+  min-height: 90vh; /* Garante que a seção ocupe boa parte da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Internalizando o estilo da classe 'interface' */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .flex {
@@ -9,55 +22,90 @@
   gap: 5.625rem;
 }
 
-.txtTopoDoSite h1 {
-  color: var(--color-text);
-  font-size: 2.875rem; /* 46px */
-  line-height: 3.125rem; /* 50px */
+.heroText {
+  flex: 1; /* Permite que o texto ocupe o espaço disponível */
 }
 
-.txtTopoDoSite h1 span {
+.heroText h1 {
+  color: var(--color-text);
+  font-size: 2.875rem;
+  line-height: 1.2; /* Usar unidade relativa é mais flexível */
+}
+
+.heroText h1 span {
   color: var(--color-primary);
 }
 
-.txtTopoDoSite p {
+.heroText p {
   color: var(--color-text);
-  margin: 2.5rem 0rem; /* 40px */
+  margin-top: 1.5rem; /* Espaçamento consistente entre parágrafos */
+  max-width: 600px; /* Limita a largura da linha para melhor legibilidade */
 }
 
-.imgTopoSite img {
-  position: relative;
-  animation: flutuar 2s ease-in-out infinite alternate;
+/* Estilos para o botão de contato (anteriormente .btn-contato) */
+.contactButton {
+  display: inline-block;
+  margin-top: 2.5rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contactButton:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.05);
+}
+
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage img {
+  width: 100%;
+  max-width: 500px; /* Limita o tamanho máximo da imagem */
+  height: auto; /* Mantém a proporção */
   border-radius: 50%;
-  width: 31.25rem; /* 500px */
-  height: 31.25rem;
+  animation: floatAnimation 3s ease-in-out infinite alternate;
 }
 
-@keyframes flutuar {
+/* Animação refatorada para usar transform */
+@keyframes floatAnimation {
   0% {
-    top: 0;
+    transform: translateY(0);
   }
   100% {
-    top: 1.875rem; /* 30px */
+    transform: translateY(20px);
   }
 }
 
-/* Responsivo */
+/* --- Responsividade --- */
 @media screen and (max-width: 1020px) {
-  .topoDoSite {
-    padding: 1.25rem 8%; /* 20px */
+  .hero {
+    padding: 4rem 8% 2rem; /* Ajuste no padding */
+    text-align: center;
   }
 
   .flex {
     flex-direction: column-reverse;
-    gap: 2.5rem; /* 40px */
+    gap: 2.5rem;
   }
 
-  .txtTopoDoSite h1 {
-    font-size: 1.875rem; /* 30px */
+  .heroText h1 {
+    font-size: 2rem; /* 32px */
   }
 
-  .imgTopoSite img {
-    width: 18.75rem; /* 300px */
-    height: 18.75rem;
+  .heroImage img {
+    max-width: 300px;
+  }
+  
+  .contactButton {
+    margin-bottom: 2rem; /* Adiciona espaço abaixo do botão no mobile */
   }
 }
