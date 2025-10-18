@@ -2,14 +2,34 @@
 import styles from "./About.module.css";
 import imagemPerfil from "../../assets/perfil.png";
 
+// Estrutura de dados para os links sociais
+const socialLinks = [
+  {
+    name: "GitHub",
+    url: "https://github.com/SrTinny",
+    icon: "bi bi-github",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/joao-victor-duarte-0b0bbb240/",
+    icon: "bi bi-linkedin",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/victor.arteng/",
+    icon: "bi bi-instagram",
+  },
+];
+
 export default function About() {
   return (
     <section className={styles.sobre} id="about" data-aos="fade-right">
       <div className="interface">
         <div className={styles.flex}>
           <div className={styles.imgSobre}>
-            <img src={imagemPerfil} alt="Foto de perfil" />
+            <img src={imagemPerfil} alt="Foto de perfil de João Victor Duarte" />
           </div>
+
           <div className={styles.txtSobre}>
             <h2>
               MUITO PRAZER, SOU<span> JOÃO VICTOR DUARTE.</span>
@@ -33,22 +53,20 @@ export default function About() {
               que impulsionem a evolução tecnológica. Vamos construir o futuro,
               juntos?
             </p>
-            <div className={styles.btnSocial}>
-              <a href="https://github.com/SrTinny">
-                <button>
-                  <i className="bi bi-github"></i>
-                </button>
-              </a>
-              <a href="https://www.linkedin.com/in/joao-victor-duarte-0b0bbb240/">
-                <button>
-                  <i className="bi bi-linkedin"></i>
-                </button>
-              </a>
-              <a href="https://www.instagram.com/victor.arteng/">
-                <button>
-                  <i className="bi bi-instagram"></i>
-                </button>
-              </a>
+
+            <div className={styles.socialLinksContainer}>
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                  aria-label={`Visitar perfil no ${link.name}`} // Acessibilidade
+                >
+                  <i className={link.icon}></i>
+                </a>
+              ))}
             </div>
           </div>
         </div>
