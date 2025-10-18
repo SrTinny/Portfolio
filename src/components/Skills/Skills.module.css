@@ -1,32 +1,44 @@
-.especialidades {
+/* src/components/Skills/Skills.module.css */
+
+.skills {
   padding: 5rem 4%;
 }
 
-.titulo {
-  color: var(--color-text);
-  font-size: 2.25rem; /* 36px */
-  text-align: center;
-  margin-bottom: 3.125rem; /* 50px */
+/* Estilos que antes eram globais */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.flex {
-  padding-top: 2.5rem; /* 40px */
-  padding-bottom: 2.5rem; /* 40px */
-  max-width: 100%;
+.title {
+  color: var(--color-text);
+  font-size: 2.25rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title span {
+  color: var(--color-primary);
+}
+
+/* Renomeado de .flex para refletir o uso de grid */
+.skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr)); /* 120px */
-  gap: 5rem; /* 30px */
+  /* Cria colunas responsivas que se adaptam ao espaço */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2.5rem;
   justify-items: center;
 }
 
-.especialidadesBox {
-  width: 10rem; /* 120px */
-  height: 10rem;
+/* Renomeado de .especialidadesBox para ser mais genérico */
+.skillCard {
+  width: 130px;
+  height: 130px;
   background-color: var(--color-card);
-  border-radius: 0.625rem; /* 10px */
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2); /* 8px */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 1.25rem; /* 20px */
+  padding: 1.25rem;
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
@@ -35,46 +47,53 @@
   color: var(--color-text);
 }
 
-.especialidadesBox:hover {
-  transform: scale(1.1);
+.skillCard:hover {
+  transform: translateY(-10px); /* Efeito de elevação sutil */
   background-color: var(--color-primary);
-  color: black;
-  box-shadow: 0 0 0.9375rem var(--color-primary); /* 15px */
+  box-shadow: 0 0 15px var(--color-primary);
 }
 
-.especialidadesBox img {
-  width: 3rem; /* 48px */
-  height: 3rem;
-  margin-bottom: 0.625rem; /* 10px */
+.skillCard img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 0.75rem;
 }
 
-.especialidadesBox h3 {
-  font-size: 0.875rem; /* 14px */
+.skillCard h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 0.3s; /* Transição suave da cor do texto */
 }
 
-/* Responsivo */
+.skillCard:hover h3 {
+  color: #fff; /* Cor do texto no hover */
+}
+
+/* --- Responsividade --- */
 @media screen and (max-width: 768px) {
-  .especialidades {
-    padding: 2.5rem 8%; /* 40px */
+  .skills {
+    padding: 2.5rem 8%;
   }
 
-  .flex {
+  .skillsGrid {
+    /* Garante 3 colunas em telas médias */
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem; /* 20px */
+    gap: 1.25rem;
   }
 
-  .especialidadesBox {
-    width: 6.25rem; /* 100px */
-    height: 6.25rem;
-    padding: 0.9375rem; /* 15px */
+  .skillCard {
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
   }
 
-  .especialidadesBox img {
-    width: 2.5rem; /* 40px */
+  .skillCard img {
+    width: 2.5rem;
     height: 2.5rem;
+    margin-bottom: 0.5rem;
   }
 
-  .especialidadesBox h3 {
-    font-size: 0.75rem; /* 12px */
+  .skillCard h3 {
+    font-size: 0.75rem;
   }
 }
