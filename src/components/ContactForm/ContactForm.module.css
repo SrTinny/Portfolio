@@ -1,5 +1,7 @@
+/* src/components/ContactForm/ContactForm.module.css */
+
 .formulario {
-  padding: 5rem 4%; /* 80px */
+  padding: 5rem 4%;
   background-color: var(--color-background);
 }
 
@@ -10,64 +12,77 @@
   margin-bottom: 2rem;
 }
 
-form {
+.form {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 2.5rem auto 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem; /* 16px */
-  margin-top: 2.5rem; /* 40px */
+  gap: 1rem;
 }
 
-form input,
-form textarea {
+/* Adicionado para os labels */
+.inputGroup {
   width: 100%;
-  padding: 1.25rem 1rem; /* 20px 15px */
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 1.25rem 1rem;
   font-size: 1rem;
   border: 1px solid var(--color-border, #ccc);
-  border-radius: 0.9375rem; /* 15px */
+  border-radius: 0.9375rem;
   outline: none;
   background-color: var(--color-input-bg, var(--color-secondary));
   color: var(--color-text);
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-form input:focus,
-form textarea:focus {
+.form input:focus,
+.form textarea:focus {
   border-color: var(--color-primary);
   box-shadow: 0 0 5px var(--color-primary);
 }
 
-form textarea {
+.form textarea {
   resize: none;
-  max-height: 200px;
+  height: 150px; /* Melhor usar height fixo em vez de max-height */
 }
 
-.btnEnviar {
-  margin-top: 1.25rem; /* 20px */
-  text-align: center;
+/* Classe para esconder labels visualmente, mas mantê-los para leitores de tela */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.btnEnviar input[type="submit"] {
-  width: 7.5rem; /* 120px */
+/* Estilos para o novo <button> */
+.submitButton {
+  width: 7.5rem;
   background-color: var(--color-primary);
   color: #fff;
   font-weight: 700;
   border: none;
-  padding: 0.75rem 1.5rem; /* 12px 24px */
-  border-radius: 0.5rem; /* 8px */
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.1s ease;
+  margin-top: 1.25rem;
+  align-self: center; /* Centraliza o botão */
 }
 
-.btnEnviar input[type="submit"]:hover {
+.submitButton:hover {
   background-color: var(--color-primary-hover, #e68900);
 }
 
-.btnEnviar input[type="submit"]:active {
+.submitButton:active {
   transform: scale(0.95);
   box-shadow: 0 0 5px var(--color-primary) inset;
 }
-
-
