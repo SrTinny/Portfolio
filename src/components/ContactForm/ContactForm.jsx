@@ -39,7 +39,7 @@ export default function ContactForm() {
     <section className={styles.formulario} id="form" data-aos="fade-up">
       <div className="interface">
         <h2 className={styles.titulo}>
-          FALA <span>COMIGO:</span>
+          FALA <span>COMIGO!</span>
         </h2>
         <form onSubmit={handleSubmit} className={styles.form}>
           {/* 4. Adicionar labels e conectar com os inputs */}

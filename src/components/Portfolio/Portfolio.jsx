@@ -58,7 +58,7 @@ export default function Portfolio() {
   return (
     <section className={styles.portfolio} id="portfolio">
       <h2 className={styles.title}>
-        MEUS <span>PROJETOS!</span>
+        MEUS <span>PROJETOS:</span>
       </h2>
 
       <div
