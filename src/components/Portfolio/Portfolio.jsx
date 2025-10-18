@@ -1,121 +1,125 @@
 // src/components/Portfolio/Portfolio.jsx
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// 1. Importe o Navigation junto com o Autoplay
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
-// 2. (Opcional, mas recomendado) Importe o CSS da navegação
 import "swiper/css/navigation";
 import styles from "./Portfolio.module.css";
 
-const projetos = [
+// Lista completa de projetos
+const projects = [
   {
-    titulo: "DevHub",
-    imagem: "/assets/devhub.png",
-    descricao: "Site da minha startup.",
+    title: "DevHub",
+    image: "/assets/devhub.png",
+    description: "Site da minha startup focado na comunidade de desenvolvedores.",
     link: "https://devhub-lake.vercel.app/",
   },
   {
-    titulo: "HidroWatts",
-    imagem: "/assets/hidrowatts.png",
-    descricao: "Projeto desenvolvido.",
+    title: "HidroWatts",
+    image: "/assets/hidrowatts.png",
+    description: "Projeto acadêmico para monitoramento de hidrômetros.",
     link: "https://viatopic.netlify.app/",
   },
   {
-    titulo: "Imovi",
-    imagem: "/assets/imovi.png",
-    descricao: "Site de aluguel e venda de imóveis.",
+    title: "Imovi",
+    image: "/assets/imovi.png",
+    description: "Modelo de site para aluguel e venda de imóveis.",
     link: "https://bootstrap-modelo.vercel.app/",
   },
-    {
-    titulo: "GRID conf",
-    imagem: "/assets/gridconf.png",
-    descricao: "Modelo de site para conferência de tecnologia.",
+  {
+    title: "GRID conf",
+    image: "/assets/gridconf.png",
+    description: "Modelo de site para conferência de tecnologia.",
     link: "https://gridconf.vercel.app/",
   },
-    {
-    titulo: "LEX Partners",
-    imagem: "/assets/lexpartners.png",
-    descricao: "Modelo de site para escritório de advocacia.",
+  {
+    title: "LEX Partners",
+    image: "/assets/lexpartners.png",
+    description: "Modelo de site para escritório de advocacia.",
     link: "https://lexpartners.vercel.app/",
   },
-    {
-    titulo: "Atelier Vita",
-    imagem: "/assets/ateliervita.png",
-    descricao: "Modelo de site para ateliê de costura.",
+  {
+    title: "Atelier Vita",
+    image: "/assets/ateliervita.png",
+    description: "Modelo de site para ateliê de costura.",
     link: "https://ateliervita.vercel.app/",
   },
-    {
-    titulo: "Aura AI",
-    imagem: "/assets/auraai.png",
-    descricao: "Modelo de site para empresa de IA.",
+  {
+    title: "Aura AI",
+    image: "/assets/auraai.png",
+    description: "Modelo de site para empresa de IA.",
     link: "https://auraai-woad.vercel.app/",
   },
-
- 
 ];
 
-export default function CarrosselProjetos() {
+export default function Portfolio() {
   const swiperRef = useRef(null);
 
   return (
-    <section className={styles.portfolioSection} id="portfolio">
-      <h2 className={styles.titulo}>
-        MEUS <span>SITES.</span>
+    <section className={styles.portfolio} id="portfolio">
+      <h2 className={styles.title}>
+        MEUS <span>PROJETOS.</span>
       </h2>
 
       <div
-        className={styles.interface}
+        className={styles.container}
         onMouseEnter={() => swiperRef.current?.autoplay?.stop()}
         onMouseLeave={() => swiperRef.current?.autoplay?.start()}
       >
-        <button
-          className={styles.arrowLeft}
-          onClick={() => swiperRef.current?.slidePrev()}
-        >
-          <i className="bi bi-caret-left" />
-        </button>
-        <button
-          className={styles.arrowRight}
-          onClick={() => swiperRef.current?.slideNext()}
-        >
-          <i className="bi bi-caret-right" />
-        </button>
-
         <Swiper
-          // 3. Registre o módulo Navigation aqui
           modules={[Autoplay, Navigation]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          slidesPerView={1}
-          spaceBetween={20}
-          autoplay={{ delay: 5000 }}
-          speed={1000}
           loop={true}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          speed={1000}
+          spaceBetween={30}
+          slidesPerView={1}
           breakpoints={{
-            640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
-            1100: { slidesPerView: 4 },
+            1100: { slidesPerView: 3 },
+            1400: { slidesPerView: 4 },
           }}
           className={styles.carousel}
         >
-          {projetos.map((projeto, idx) => (
-            <SwiperSlide key={idx}>
-              <a href={projeto.link} target="_blank" rel="noreferrer">
-                <div
-                  className={styles.imgPort}
-                  style={{ backgroundImage: `url(${projeto.imagem})` }}
-                >
-                  <div className={styles.overlay}>
-                    <div className={styles.projectDetails}>
-                      <h2>{projeto.titulo}</h2>
-                      <p>{projeto.descricao}</p>
-                    </div>
+          {projects.map((project) => (
+            <SwiperSlide key={project.title}>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectCard}
+                aria-label={`Ver o projeto ${project.title}`}
+              >
+                <img
+                  src={project.image}
+                  alt={`Screenshot do projeto ${project.title}`}
+                  className={styles.projectImage}
+                />
+                <div className={styles.overlay}>
+                  <div className={styles.projectDetails}>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
                   </div>
                 </div>
               </a>
             </SwiperSlide>
           ))}
         </Swiper>
+
+        <button
+          className={`${styles.arrow} ${styles.arrowLeft}`}
+          onClick={() => swiperRef.current?.slidePrev()}
+          aria-label="Projeto anterior"
+        >
+          <i className="bi bi-caret-left-fill" />
+        </button>
+        <button
+          className={`${styles.arrow} ${styles.arrowRight}`}
+          onClick={() => swiperRef.current?.slideNext()}
+          aria-label="Próximo projeto"
+        >
+          <i className="bi bi-caret-right-fill" />
+        </button>
       </div>
     </section>
   );
