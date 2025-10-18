@@ -13,8 +13,8 @@
   justify-content: center;
   width: 100%;
   padding: 0 2rem;
-  backdrop-filter: blur(10px); /* Fundo embaçado */
-  -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -24,8 +24,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
+  width: 100%; /* Garante que as colunas ocupem todo o espaço disponível */
   border-bottom: 1px solid var(--color-secondary);
   padding-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Adicionado para separar do copyright */
 }
 
 .column {
@@ -56,7 +58,7 @@
   color: var(--color-text);
   text-decoration: none;
   opacity: 0.85;
-  transition: color 0.3s, opacity 0.3s;;
+  transition: color 0.3s, opacity 0.3s;
 }
 
 .column li a:hover {
@@ -93,28 +95,31 @@
 }
 
 .form button:hover {
-  background-color: #004fa3; /* tom mais escuro do azul primário */
+  background-color: var(--color-primary-dark);
   transform: scale(1.03);
 }
 
-.btnSocial {
+/* Renomeado de .btnSocial para ser mais específico */
+.socialLinks {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem; /* Ajustado */
 }
 
-.btnSocial a {
+.socialLinks a {
   color: var(--color-text);
   font-size: 1.2rem;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
-.btnSocial a:hover {
+.socialLinks a:hover {
   color: var(--color-primary);
+  transform: translateY(-2px);
 }
 
 .copy {
+  width: 100%; /* Garante que o copyright ocupe toda a largura */
   display: flex;
   justify-content: space-between;
   padding-top: 1.5rem;
@@ -125,6 +130,19 @@
   text-align: center;
 }
 
+/* NOVA CLASSE: Para esconder labels visualmente, mas mantê-los para leitores de tela */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
   .columns {
@@ -133,7 +151,7 @@
     gap: 2.5rem;
   }
 
-  .btnSocial {
+  .socialLinks {
     justify-content: flex-start;
   }
 
@@ -141,6 +159,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    padding-top: 0; /* Ajuste para remover espaço extra */
   }
 
   .form input,

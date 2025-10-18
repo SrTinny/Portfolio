@@ -79,7 +79,7 @@
 }
 
 .submitButton:hover {
-  background-color: var(--color-primary-hover, #e68900);
+  background-color: var(--color-primary-hover);
 }
 
 .submitButton:active {
