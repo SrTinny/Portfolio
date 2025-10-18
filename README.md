@@ -1,52 +1,75 @@
-# Tinny DEV - Portfólio de João Victor Duarte
+# Tinny DEV — Portfólio (João Victor Duarte)
 
-Bem-vindo ao meu portfólio! Este é o espaço onde compartilho minha trajetória e meus projetos no desenvolvimento web. Aqui, você pode encontrar uma amostra das minhas habilidades, especialidades e alguns dos trabalhos que tenho orgulho de apresentar. Vamos juntos explorar a criatividade e o potencial do desenvolvimento digital!
+Uma aplicação de portfólio pessoal construída com React + Vite para apresentar projetos, habilidades e informações de contato de forma responsiva e acessível.
 
-## 🚀 Sobre Mim
+## Visão geral
 
-Olá! Sou João Victor Duarte, um desenvolvedor web em constante evolução, com foco em transformar ideias em experiências digitais inovadoras. Atualmente, estou aprimorando minhas habilidades em diversas tecnologias para criar soluções práticas e visuais que gerem valor e encantem os usuários.
+Este repositório contém um site single-page moderno que usa componentes React organizados por responsabilidade e CSS Modules para estilo local. O projeto privilegia performance, animações simples (AOS) e um carrossel de projetos baseado em Swiper.
 
-## 🌟 Estrutura do Portfólio
+Tech stack principal:
+- React 18
+- Vite
+- Swiper (carrossel)
+- AOS (animações)
+- bootstrap-icons
 
-Este portfólio é organizado para oferecer uma visão completa de minhas especialidades, experiências e projetos:
+## Rápido: rodando localmente
 
-### 1. **Início**
-   - Apresentação de boas-vindas com uma introdução ao meu trabalho e valores, com foco em criatividade e inovação digital.
+Requisitos: Node.js (≥16), npm
 
-### 2. **Especialidades**
-   - Lista das principais tecnologias e ferramentas que utilizo, incluindo Java, Git, React, PHP, SQL, Node.js, Bootstrap, JavaScript, C e Python, com ícones e uma breve descrição para destacar minha experiência com cada uma delas.
+Instalação e execução em desenvolvimento:
 
-### 3. **Sobre**
-   - Um pouco sobre minha trajetória, meus interesses e alguns dos projetos que realizei, como o desenvolvimento de plataformas em parceria com a Universidade Federal do Ceará (UFC), como "bibliotecacovid.ufc.br" e "formamus.sobral.ufc.br".
+```powershell
+npm install
+npm run dev
+```
 
-### 4. **Portfólio de Projetos**
-   - Amostra dos meus principais projetos, incluindo links para visualização e descrições curtas, como:
-      - [iMovi](https://bootstrap-modelo.vercel.app/)
-      - [Pokedex](https://pokedex-kappa-azure.vercel.app/)
-      - [Tela de login League of Legends](https://tela-de-login-league-of-legends.vercel.app/)
-      - [Rocket PAY](https://explore-lab-01-tawny.vercel.app/)
+Build de produção:
 
-### 5. **Contato**
-   - Formulário para entrar em contato diretamente comigo. Sinta-se à vontade para enviar uma mensagem, seja para colaboração, projetos ou simplesmente para conectar.
+```powershell
+npm run build
+npm run preview
+```
 
-## 🛠 Tecnologias Utilizadas
+O servidor de desenvolvimento do Vite normalmente roda em http://localhost:5173.
 
-Este portfólio foi desenvolvido com foco em responsividade e acessibilidade, utilizando as seguintes tecnologias:
-   - **HTML5** e **CSS3** para estruturação e design do site
-   - **JavaScript** para funcionalidades dinâmicas
-   - **Bootstrap** para design responsivo e utilização de ícones
-   - **Responsive.css** para ajustes em diferentes dispositivos
+## Estrutura do projeto
 
-## 🎨 Visual e Estilo
+- `index.html` — entry HTML que carrega `src/main.jsx`.
+- `src/main.jsx` — ponto de montagem do React e `BrowserRouter`.
+- `src/App.jsx` — composição das seções (Header, Home, Skills, About, Portfolio, ContactForm, Footer) e inicialização de AOS.
+- `src/components/*` — componentes organizados por pasta, cada um com `*.module.css` quando aplicável.
+- `src/hooks/useThemeToggle.js` — hook simples para persistir tema (localStorage + classe `light-mode`).
+- `public/assets/` — imagens e recursos estáticos referenciados via `/assets/`.
 
-Para criar uma experiência atraente e intuitiva, utilizei uma paleta de cores moderna e elementos visuais harmoniosos. Cada seção foi projetada para ser visualmente agradável e fácil de navegar, proporcionando uma experiência imersiva para quem visita meu portfólio.
+## Convenções e boas práticas do repositório
 
-## 📬 Contato
+- Estilo: CSS Modules (importado como `styles`) em componentes. Preserve nomes de classes usados no JSX.
+- Assets estáticos: use caminhos do tipo `/assets/<nome>` (pasta `public/assets`) para evitar problemas de bundling.
+- Animações: AOS é inicializado em `App.jsx`. Alterações nas configurações de AOS devem ser testadas visualmente.
+- Carrossel: `src/components/Portfolio/Portfolio.jsx` usa Swiper com módulos `Autoplay` e `Navigation`. Não remova os imports de `swiper/css` e `swiper/css/navigation`.
 
-Vamos nos conectar? Sinta-se à vontade para me encontrar nas redes sociais ou enviar uma mensagem por e-mail. Será um prazer compartilhar experiências e trocar ideias!
+## Desenvolvimento rápido — tarefas comuns
 
-- **Instagram:** [@sr.tinny](https://www.instagram.com/sr.tinny/)
-- **LinkedIn:** [João Victor Duarte](https://www.linkedin.com/in/joao-victor-duarte-0b0bbb240/)
-- **GitHub:** [SrTinny](https://github.com/SrTinny)
-- **E-mail:** [victor.eng.dev@gmail.com](mailto:victor.eng.dev@gmail.com)
+- Adicionar um novo projeto ao carrossel: editar a lista `projetos` em `src/components/Portfolio/Portfolio.jsx` adicionando um objeto com `titulo`, `imagem`, `descricao` e `link`.
+- Ajustar tema: atualizar `src/hooks/useThemeToggle.js` (ou `scripts.js` se fizer fallback) — tema é salvo em `localStorage` com a chave `theme`.
+
+## Deploy
+
+O site é estático e pode ser hospedado em plataformas como Vercel, Netlify ou GitHub Pages. Faça o `npm run build` e envie a pasta `dist` para o provedor.
+
+## Como contribuir
+
+1. Fork e clone este repositório.
+2. Crie uma branch com um nome descritivo: `feature/nome-da-feature` ou `fix/descrição`.
+3. Execute alterações localmente e verifique visualmente.
+4. Abra um Pull Request descrevendo a mudança e os passos para testar.
+
+## Contato
+
+- Instagram: @sr.tinny — https://www.instagram.com/sr.tinny/
+- LinkedIn: João Victor Duarte — https://www.linkedin.com/in/joao-victor-duarte-0b0bbb240/
+- GitHub: SrTinny — https://github.com/SrTinny
+
+Se quiser que eu inclua exemplos de PR template, regras de lint ou um checklist de revisão visual automatizado, posso adicionar como próximo passo.
 
