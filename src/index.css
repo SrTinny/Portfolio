@@ -1,27 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap");
 
-/* Variáveis de cores */
+/* Variáveis de Cores (Tema Escuro Padrão) */
 :root {
   --color-background: #0d1117;
-  --color-text: #c9d1d9;
+  --color-surface: #161b22; /* Fundo para cards e seções alternativas */
+  --color-text-primary: #c9d1d9;
+  --color-text-secondary: #8b949e;
   --color-primary: #2f81f7;
-  --color-secondary: #8b949e;
+  --color-primary-dark: #1f6feb; /* Para hover de botões */
+  --color-border: #30363d;
   --color-overlay: rgba(13, 17, 23, 0.8);
-  --color-dark-overlay: rgba(13, 17, 23, 0.95);
-  --color-test1: #060D18;
 }
 
-/* Tema claro */
-.light-mode {
-  --color-background: #f0f6fc;
-  --color-text: #0d1117;
+/* Tema Claro */
+body.light-mode {
+  --color-background: #ffffff;
+  --color-surface: #f6f8fa;
+  --color-text-primary: #24292f;
+  --color-text-secondary: #57606a;
   --color-primary: #0969da;
-  --color-secondary: #57606a;
+  --color-primary-dark: #0550ae;
+  --color-border: #d0d7de;
   --color-overlay: rgba(240, 246, 252, 0.8);
-  --color-dark-overlay: rgba(240, 246, 252, 0.9);
-  --color-test1: #f6f8fa;
 }
 
+/* Reset Global e Padrões */
 * {
   margin: 0;
   padding: 0;
@@ -29,48 +32,27 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  /* Adiciona rolagem suave ao navegar pelos links da página (ex: #home) */
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-background);
-  color: var(--color-text);
-  height: 100vh;
-}
-
-.interface {
-  max-width: 75rem; /* 1200px */
-  margin: 0 auto;
-}
-
-.flex {
-  display: flex;
-}
-
-.btn-contato button {
-  padding: 0.625rem 2.5rem; /* 10px 40px */
-  font-size: 1.125rem;      /* 18px */
-  font-weight: 600;
-  background-color: var(--color-primary);
-  border: 0;
-  border-radius: 1.875rem; /* 30px */
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-h2.titulo {
-  color: var(--color-text);
-  font-size: 2.375rem; /* 38px */
-  text-align: center;
-}
-
-h2.titulo span {
-  color: var(--color-primary);
-}
-
-button:hover,
-form .btn-enviar input:hover {
-  box-shadow: 0rem 0rem 0.5rem var(--color-primary); /* 8px */
-  transform: scale(1.05);
+  color: var(--color-text-primary);
+  min-height: 100vh; /* Mais seguro que 'height' para evitar cortes de conteúdo */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para troca de tema */
 }
 
 p {
-  line-height: 1.8rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7; /* Usar valor sem unidade é mais flexível */
+}
+
+/* Classes Utilitárias Globais */
+/* Mantive a classe .interface, pois é um bom padrão para containers */
+.interface {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; /* Adicionado padding para evitar que o conteúdo cole nas bordas */
 }
