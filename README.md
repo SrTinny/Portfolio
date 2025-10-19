@@ -71,5 +71,3 @@ O site é estático e pode ser hospedado em plataformas como Vercel, Netlify ou 
 - LinkedIn: João Victor Duarte — https://www.linkedin.com/in/joao-victor-duarte-0b0bbb240/
 - GitHub: SrTinny — https://github.com/SrTinny
 
-Se quiser que eu inclua exemplos de PR template, regras de lint ou um checklist de revisão visual automatizado, posso adicionar como próximo passo.
-
