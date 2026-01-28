@@ -90,24 +90,24 @@ export default function About() {
               variants={containerVariants}
             >
               <motion.h2 variants={itemVariants}>
-                CONHEÇA<span> JOÃO VICTOR DUARTE.</span>
+                MUITO PRAZER, SOU<span> JOÃO VICTOR DUARTE.</span>
               </motion.h2>
               <motion.p variants={itemVariants}>
                 Com mais de 8 anos de experiência em programação e 5 anos
-                dedicados ao desenvolvimento web, especialista em construir
-                soluções digitais criativas, funcionais e intuitivas.
-                Profissional entusiasta de tecnologia e graduando em Engenharia da
-                Computação, com base sólida para unir teoria e
+                dedicados ao desenvolvimento web, minha paixão é construir
+                soluções digitais que sejam criativas, funcionais e intuitivas.
+                Sou um entusiasta de tecnologia e graduando em Engenharia da
+                Computação, o que me dá uma base sólida para unir teoria e
                 prática, transformando desafios complexos em produtos de alta
                 qualidade.
               </motion.p>
               <motion.p variants={itemVariants}>
-                Jornada marcada pela participação em projetos de impacto na
+                Minha jornada inclui a participação em projetos de impacto na
                 Universidade Federal do Ceará, como a Biblioteca COVID e o portal
                 FormaMus.
               </motion.p>
               <motion.p variants={itemVariants}>
-                Sempre em busca de novos desafios, colaborações e parcerias
+                Estou sempre em busca de novos desafios, colaborações e parcerias
                 que impulsionem a evolução tecnológica. Vamos construir o futuro,
                 juntos?
               </motion.p>
@@ -149,7 +149,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            POR QUE <span>ESCOLHER</span> PARA SEUS PROJETOS
+            POR QUE <span>ME ESCOLHER</span> PARA SEU PROJETO:
           </motion.h3>
 
           <div className={styles.diffGrid}>

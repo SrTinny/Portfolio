@@ -208,7 +208,14 @@
   .stats {
     flex-direction: column;
     gap: 30px;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stat {
+    align-items: center;
   }
 
   .value {

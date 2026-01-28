@@ -52,14 +52,14 @@ export default function Home() {
             TRANSFORMANDO IDEIAS EM SOLUÇÕES DIGITAIS<span>.</span>
           </motion.h1>
           <motion.p variants={textVariants}>
-            Desenvolvedor full-stack com <strong>mais de 8 anos de experiência</strong>. 
-            Especialista em construir qualquer tipo de site para qualquer tipo de nicho: 
+            Sou um desenvolvedor full-stack com <strong>mais de 8 anos de experiência</strong>. 
+            Minha especialidade é construir qualquer tipo de site para qualquer tipo de nicho: 
             páginas web, sistemas complexos, landing pages e e-commerces.
           </motion.p>
           <motion.p variants={textVariants}>
-            Entrega de soluções eficientes, escaláveis e orientadas a resultados. 
+            Entrego soluções eficientes, escaláveis e orientadas a resultados. 
             Se você tem uma ideia ou precisa resolver um problema digital, 
-            transformamos em realidade com qualidade e profissionalismo.
+            eu consigo transformar em realidade com qualidade e profissionalismo.
           </motion.p>
 
           <motion.div className={styles.ctaButtons} variants={textVariants}>

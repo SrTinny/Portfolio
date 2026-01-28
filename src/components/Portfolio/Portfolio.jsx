@@ -11,7 +11,7 @@ const projects = [
   {
     title: "DevHub",
     image: "/assets/devhub.png",
-    description: "Plataforma focada na comunidade de desenvolvedores.",
+    description: "Site da minha startup focado na comunidade de desenvolvedores.",
     link: "https://devhub-lake.vercel.app/",
   },
   {
@@ -58,7 +58,7 @@ export default function Portfolio() {
   return (
     <section className={styles.portfolio} id="portfolio">
       <h2 className={styles.title}>
-        PROJETOS <span>RECENTES:</span>
+        MEUS <span>PROJETOS:</span>
       </h2>
 
       <div

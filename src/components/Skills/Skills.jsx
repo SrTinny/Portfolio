@@ -28,7 +28,7 @@ export default function Skills() {
     // 2. Classes renomeadas e modularizadas
     <section className={styles.skills} id="skills" data-aos="fade-up">
       <div className={styles.container}>
-        <h2 className={styles.title}>PRINCIPAIS <span>ESPECIALIDADES.</span></h2>
+        <h2 className={styles.title}>MINHAS <span>ESPECIALIDADES.</span></h2>
         <div className={styles.skillsGrid}>
           {skills.map(({ name, icon }) => (
             <div className={styles.skillCard} key={name}>
