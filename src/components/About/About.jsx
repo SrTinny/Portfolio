@@ -149,7 +149,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            POR QUE <span>ESCOLHER</span> PARA SEU PROJETO:
+            POR QUE ME <span>ESCOLHER</span> PARA SEU PROJETO:
           </motion.h3>
 
           <div className={styles.diffGrid}>

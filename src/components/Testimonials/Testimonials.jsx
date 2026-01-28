@@ -14,7 +14,7 @@ const testimonials = [
   {
     id: 2,
     name: "Seu próximo cliente feliz",
-    role: "Próximo case de sucesso",
+    role: "Próximo projeto de sucesso",
     image: "bi bi-heart-fill",
     text: "Sou confiável, entrego no prazo e faço projetos de qualidade. Vamos conversar sobre sua ideia?",
     rating: 5
@@ -106,7 +106,7 @@ export default function Testimonials() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <div className={styles.badge}>Pronto para o próximo case?</div>
+          <div className={styles.badge}>Pronto para o próximo cliente?</div>
           <h3>Seja o próximo cliente feliz e ganhe um depoimento aqui</h3>
           <p>Trabalho com qualidade, profissionalismo e resultados comprovados.</p>
           <a href="#form" className={styles.ctaButton}>
