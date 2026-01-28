@@ -1,0 +1,147 @@
+/* src/components/ErrorBoundary/ErrorBoundary.module.css */
+
+.errorContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+  padding: 2rem;
+}
+
+.errorContent {
+  max-width: 500px;
+  text-align: center;
+  background-color: var(--color-surface);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  border: 2px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.errorTitle {
+  font-size: 2rem;
+  color: #dc3545;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.errorDescription {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.errorDetails {
+  background-color: var(--color-background);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  border: 1px solid var(--color-border);
+}
+
+.errorDetails summary {
+  cursor: pointer;
+  color: var(--color-primary);
+  font-weight: 600;
+  padding: 0.5rem;
+  user-select: none;
+}
+
+.errorDetails summary:hover {
+  color: var(--color-primary-dark);
+}
+
+.errorStack {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  overflow-x: auto;
+  margin-top: 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Courier New', monospace;
+  line-height: 1.4;
+}
+
+.errorActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resetButton,
+.homeButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resetButton {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.resetButton:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resetButton:active {
+  transform: translateY(0);
+}
+
+.homeButton {
+  background-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.homeButton:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.homeButton:active {
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .errorContainer {
+    padding: 1rem;
+  }
+
+  .errorContent {
+    padding: 2rem 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .errorTitle {
+    font-size: 1.5rem;
+  }
+
+  .errorDescription {
+    font-size: 1rem;
+  }
+
+  .errorActions {
+    flex-direction: column;
+  }
+
+  .resetButton,
+  .homeButton {
+    width: 100%;
+  }
+}

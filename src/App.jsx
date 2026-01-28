@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 // Importação dos componentes da página
 import Header from "./components/Header/Header";
@@ -8,6 +9,7 @@ import About from "./components/About/About";
 import Portfolio from "./components/Portfolio/Portfolio";
 import ContactForm from "./components/ContactForm/ContactForm";
 import Footer from "./components/Footer/Footer";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 // Hook customizado para o tema
 import useThemeToggle from "./hooks/useThemeToggle";
@@ -18,21 +20,16 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 
 export default function App() {
-  // 1. Puxa o estado do tema do seu hook customizado.
-  // Isso centraliza o controle do tema no componente principal.
   const { isLightMode } = useThemeToggle();
 
-  // Efeito para inicializar a biblioteca de animações (AOS)
   useEffect(() => {
     AOS.init({
-      once: true,       // A animação acontece apenas uma vez por elemento
-      duration: 800,    // Duração da animação em milissegundos
-      offset: 50,       // Inicia a animação 50px antes de o elemento aparecer na tela
+      once: true,
+      duration: 800,
+      offset: 50,
     });
-  }, []); // O array vazio [] garante que isso rode apenas uma vez
+  }, []);
 
-  // 2. Efeito para aplicar a classe do tema no corpo do documento
-  // Isso garante que o tema seja aplicado globalmente.
   useEffect(() => {
     const body = document.body;
     if (isLightMode) {
@@ -40,11 +37,10 @@ export default function App() {
     } else {
       body.classList.remove("light-mode");
     }
-    // Este efeito roda toda vez que 'isLightMode' mudar.
   }, [isLightMode]);
 
   return (
-    <>
+    <ErrorBoundary>
       <Header />
       <main>
         <Home />
@@ -54,6 +50,40 @@ export default function App() {
         <ContactForm />
       </main>
       <Footer />
-    </>
+      
+      {/* Toaster para notificações */}
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        gutter={8}
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: 'var(--color-surface)',
+            color: 'var(--color-text-primary)',
+            border: '1px solid var(--color-border)',
+            borderRadius: '0.5rem',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+            padding: '1rem',
+          },
+          success: {
+            style: {
+              background: '#d4edda',
+              color: '#155724',
+              border: '1px solid #c3e6cb',
+            },
+            icon: '✅',
+          },
+          error: {
+            style: {
+              background: '#f8d7da',
+              color: '#721c24',
+              border: '1px solid #f5c6cb',
+            },
+            icon: '❌',
+          },
+        }}
+      />
+    </ErrorBoundary>
   );
 }
