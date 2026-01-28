@@ -90,18 +90,19 @@ export default function About() {
               variants={containerVariants}
             >
               <motion.h2 variants={itemVariants}>
-                MUITO PRAZER, SOU<span> JOÃO VICTOR DUARTE.</span>
+                CONHEÇA<span> JOÃO VICTOR DUARTE.</span>
               </motion.h2>
               <motion.p variants={itemVariants}>
                 Com mais de 8 anos de experiência em programação e 5 anos
-                dedicados ao desenvolvimento web, a paixão está em construir
+                dedicados ao desenvolvimento web, especialista em construir
                 soluções digitais criativas, funcionais e intuitivas.
-                Graduando em Engenharia da Computação, unindo teoria e
-                prática para transformar desafios complexos em produtos de alta
+                Profissional entusiasta de tecnologia e graduando em Engenharia da
+                Computação, com base sólida para unir teoria e
+                prática, transformando desafios complexos em produtos de alta
                 qualidade.
               </motion.p>
               <motion.p variants={itemVariants}>
-                Jornada que inclui participação em projetos de impacto na
+                Jornada marcada pela participação em projetos de impacto na
                 Universidade Federal do Ceará, como a Biblioteca COVID e o portal
                 FormaMus.
               </motion.p>
@@ -148,7 +149,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            POR QUE <span>ESCOLHER</span> PARA SEU PROJETO:
+            POR QUE <span>ESCOLHER</span> PARA SEUS PROJETOS
           </motion.h3>
 
           <div className={styles.diffGrid}>

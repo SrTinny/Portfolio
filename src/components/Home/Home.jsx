@@ -53,11 +53,11 @@ export default function Home() {
           </motion.h1>
           <motion.p variants={textVariants}>
             Desenvolvedor full-stack com <strong>mais de 8 anos de experiência</strong>. 
-            Especialidade em construir qualquer tipo de site para qualquer tipo de nicho: 
+            Especialista em construir qualquer tipo de site para qualquer tipo de nicho: 
             páginas web, sistemas complexos, landing pages e e-commerces.
           </motion.p>
           <motion.p variants={textVariants}>
-            Soluções eficientes, escaláveis e orientadas a resultados. 
+            Entrega de soluções eficientes, escaláveis e orientadas a resultados. 
             Se você tem uma ideia ou precisa resolver um problema digital, 
             transformamos em realidade com qualidade e profissionalismo.
           </motion.p>

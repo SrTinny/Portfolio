@@ -35,7 +35,7 @@ export default function Footer() {
         <div className={styles.columns}>
           <div className={styles.column}>
             <h2>João Victor | Dev</h2>
-            <p>Desenvolvedor full-stack que transforma ideias em soluções digitais.</p>
+            <p>Desenvolvedor full-stack que transforma ideias em soluções digitais</p>
             <form onSubmit={handleSubscribe} className={styles.form}>
               {/* Adicionando label para acessibilidade */}
               <label htmlFor="newsletter-email" className={styles.visuallyHidden}>
@@ -88,7 +88,7 @@ export default function Footer() {
 
         <div className={styles.copy}>
           <p>João Victor Duarte | Dev © {new Date().getFullYear()}</p>
-          <p>Realizando seus projetos ❤️</p>
+          <p>Realizando seu projeto ❤️</p>
         </div>
       </div>
     </footer>

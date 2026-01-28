@@ -16,8 +16,8 @@ const faqs = [
   },
   {
     id: 3,
-    question: "Você oferece manutenção e suporte após o lançamento?",
-    answer: "Sim! Ofereço pacotes de suporte e manutenção pós-lançamento. Posso acompanhar por 30 dias gratuitos incluindo correções de bugs, e ofereço planos de suporte contínuo depois."
+    question: "Vocês oferecem manutenção e suporte após o lançamento?",
+    answer: "Sim! Ofereço pacotes de suporte e manutenção pós-lançamento. Posso acompanhar por 30 dias gratuitos incluindo correções de bugs, e oferço planos de suporte contínuo depois."
   },
   {
     id: 4,
@@ -26,13 +26,13 @@ const faqs = [
   },
   {
     id: 5,
-    question: "Quais tecnologias você usa?",
+    question: "Que tecnologias você usa?",
     answer: "Trabalho principalmente com React, Node.js, Python, SQL/NoSQL. Escolho as melhores tecnologias para cada projeto, sempre mantendo qualidade, performance e manutenibilidade em mente."
   },
   {
     id: 6,
     question: "Posso ver exemplos de trabalhos anteriores?",
-    answer: "Sim! Tenho um portfólio com vários projetos já realizados. Também posso compartilhar referências e estudos de caso dos meus trabalhos."
+    answer: "Sim! Tenho um portfólio com vários projetos já realizados. Também posso compartilhar referencias e estudos de caso dos meus trabalhos."
   },
   {
     id: 7,

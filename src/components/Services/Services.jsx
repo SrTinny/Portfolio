@@ -73,7 +73,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
         >
           <h2>O QUE <span>OFEREÇO:</span></h2>
-          <p>Qualquer tipo de site, para qualquer tipo de nicho. Aqui estão os serviços principais:</p>
+          <p>Qualquer tipo de site, para qualquer tipo de nicho. Principais serviços:</p>
         </motion.div>
 
         <motion.div

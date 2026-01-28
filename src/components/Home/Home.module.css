@@ -186,12 +186,10 @@
 
   .ctaButtons {
     justify-content: center;
-    align-items: center;
   }
 
   .stats {
     justify-content: center;
-    align-items: center;
   }
 }
 
@@ -199,8 +197,6 @@
   .ctaButtons {
     flex-direction: column;
     gap: 10px;
-    align-items: center;
-    width: 100%;
   }
 
   .primaryButton,
@@ -212,7 +208,7 @@
   .stats {
     flex-direction: column;
     gap: 30px;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .value {

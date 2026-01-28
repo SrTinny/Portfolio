@@ -1,6 +1,5 @@
 // src/components/Portfolio/Portfolio.jsx
 import { useRef } from "react";
-import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -59,7 +58,7 @@ export default function Portfolio() {
   return (
     <section className={styles.portfolio} id="portfolio">
       <h2 className={styles.title}>
-        MEUS <span>PROJETOS:</span>
+        PROJETOS <span>RECENTES:</span>
       </h2>
 
       <div
@@ -82,19 +81,14 @@ export default function Portfolio() {
           }}
           className={styles.carousel}
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <SwiperSlide key={project.title}>
-              <motion.a
+              <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.projectCard}
                 aria-label={`Ver o projeto ${project.title}`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
               >
                 <img
                   src={project.image}
@@ -103,45 +97,31 @@ export default function Portfolio() {
                   loading="lazy"
                   decoding="async"
                 />
-                <motion.div
-                  className={styles.overlay}
-                  initial={{ opacity: 0.9 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <motion.div
-                    className={styles.projectDetails}
-                    initial={{ y: 10 }}
-                    whileHover={{ y: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
+                <div className={styles.overlay}>
+                  <div className={styles.projectDetails}>
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
-                  </motion.div>
-                </motion.div>
-              </motion.a>
+                  </div>
+                </div>
+              </a>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <motion.button
+        <button
           className={`${styles.arrow} ${styles.arrowLeft}`}
           onClick={() => swiperRef.current?.slidePrev()}
           aria-label="Projeto anterior"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
         >
           <i className="bi bi-caret-left-fill" />
-        </motion.button>
-        <motion.button
+        </button>
+        <button
           className={`${styles.arrow} ${styles.arrowRight}`}
           onClick={() => swiperRef.current?.slideNext()}
           aria-label="Próximo projeto"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
         >
           <i className="bi bi-caret-right-fill" />
-        </motion.button>
+        </button>
       </div>
     </section>
   );

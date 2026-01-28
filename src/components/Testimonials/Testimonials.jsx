@@ -8,15 +8,15 @@ const testimonials = [
     name: "Aguardando depoimentos de clientes",
     role: "Seus clientes satisfeitos",
     image: "bi bi-star-fill",
-    text: "Coletando depoimentos de clientes satisfeitos. Seu feedback é muito importante!",
+    text: "Coletando depoimentos de clientes satisfeitos para compartilhar aqui. Seu feedback é muito importante!",
     rating: 5
   },
   {
     id: 2,
     name: "Seu próximo cliente feliz",
-    role: "Próximo projeto de sucesso",
+    role: "Próximo case de sucesso",
     image: "bi bi-heart-fill",
-    text: "Confiabilidade, cumprimento de prazos e qualidade em projetos. Vamos conversar sobre sua ideia?",
+    text: "Confiabilidade, entrega no prazo e projetos de qualidade garantidos. Vamos conversar sobre sua ideia?",
     rating: 5
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
     name: "Mais depoimentos em breve",
     role: "Trabalhe conosco e vire case",
     image: "bi bi-hand-thumbs-up-fill",
-    text: "Resultados de qualidade garantem depoimentos. Estou pronto para incluir seu feedback aqui.",
+    text: "Ao trabalhar conosco e aproveitar dos resultados, seu depoimento será destaque aqui.",
     rating: 5
   }
 ];
@@ -61,7 +61,7 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
         >
           <h2>O QUE CLIENTES <span>DIZEM:</span></h2>
-          <p>Feedback de quem confiou em mim para transformar suas ideias</p>
+          <p>Feedback de quem confiou para transformar suas ideias</p>
         </motion.div>
 
         <motion.div
@@ -106,7 +106,7 @@ export default function Testimonials() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <div className={styles.badge}>Pronto para o próximo cliente?</div>
+          <div className={styles.badge}>Pronto para o próximo case?</div>
           <h3>Seja o próximo cliente feliz e ganhe um depoimento aqui</h3>
           <p>Trabalho com qualidade, profissionalismo e resultados comprovados.</p>
           <a href="#form" className={styles.ctaButton}>

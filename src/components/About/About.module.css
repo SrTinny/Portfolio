@@ -179,9 +179,14 @@
 }
 
 @media (max-width: 768px) {
+  .differentials {
+    padding: 60px 4%;
+  }
+
   .diffTitle {
     font-size: 2rem;
     margin-bottom: 40px;
+    text-align: center;
   }
 
   .diffGrid {
@@ -190,5 +195,11 @@
 
   .diffCard {
     padding: 25px;
+    text-align: center;
+  }
+
+  .diffIcon {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
