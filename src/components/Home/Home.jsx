@@ -33,6 +33,8 @@ export default function Home() {
           <img 
             src={imagemTopo} 
             alt="Logo animado de um desenvolvedor com um cérebro digital" 
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

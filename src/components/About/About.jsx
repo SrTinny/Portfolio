@@ -27,7 +27,12 @@ export default function About() {
       <div className="interface">
         <div className={styles.flex}>
           <div className={styles.imgSobre}>
-            <img src={imagemPerfil} alt="Foto de perfil de João Victor Duarte" />
+            <img 
+              src={imagemPerfil} 
+              alt="Foto de perfil de João Victor Duarte" 
+              loading="lazy"
+              decoding="async"
+            />
           </div>
 
           <div className={styles.txtSobre}>

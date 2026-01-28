@@ -96,3 +96,56 @@
   transform: scale(0.95);
   box-shadow: 0 0 5px var(--color-primary) inset;
 }
+
+.submitButton:disabled {
+  background-color: var(--color-text-secondary);
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+
+/* Mensagens de feedback */
+.successMessage,
+.errorMessage {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  animation: slideDown 0.3s ease;
+}
+
+.successMessage {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.errorMessage {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modo escuro - ajustes nas mensagens */
+body:not(.light-mode) .successMessage {
+  background-color: #1e4620;
+  color: #a3e4a3;
+  border-color: #2d6330;
+}
+
+body:not(.light-mode) .errorMessage {
+  background-color: #5a1a1a;
+  color: #f8b4b4;
+  border-color: #7d2828;
+}

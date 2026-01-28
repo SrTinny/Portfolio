@@ -55,7 +55,7 @@ export default function Footer() {
 
           <div className={styles.column}>
             <h3>Formas de contato</h3>
-            <p>+55 (88) 99856-2665</p>
+            <p>+55 (88) 9694-4888</p>
             <p>victor.eng.dev@gmail.com</p>
             <div className={styles.socialLinks}>
               {socialLinks.map((link) => (

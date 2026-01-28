@@ -34,3 +34,4 @@ yarn-error.log*
 *.tsbuildinfo
 
 MELHORIAS.md
+EMAILJS_CONFIG.md

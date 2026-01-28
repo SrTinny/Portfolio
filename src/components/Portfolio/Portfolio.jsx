@@ -94,6 +94,8 @@ export default function Portfolio() {
                   src={project.image}
                   alt={`Screenshot do projeto ${project.title}`}
                   className={styles.projectImage}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className={styles.overlay}>
                   <div className={styles.projectDetails}>

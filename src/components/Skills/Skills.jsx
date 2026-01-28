@@ -35,6 +35,8 @@ export default function Skills() {
               <img 
                 src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} 
                 alt={`${name} logo`} 
+                loading="lazy"
+                decoding="async"
               />
               <h3>{name}</h3>
             </div>

@@ -1,9 +1,9 @@
 // src/components/ContactForm/ContactForm.jsx
-import { useState } from 'react'; // 1. Importar useState
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import styles from './ContactForm.module.css';
 
 export default function ContactForm() {
-  // 2. Gerenciar o estado do formulário
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,7 +11,9 @@ export default function ContactForm() {
     message: '',
   });
 
-  // Função para atualizar o estado em cada mudança nos inputs
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -20,19 +22,53 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Agora você pode usar o objeto `formData` para enviar os dados
-    console.log('Dados do formulário:', formData);
-    alert(`Obrigado, ${formData.name}! Sua mensagem foi enviada. ✅`);
-    
-    // 3. Limpar o formulário resetando o estado
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-    });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Configuração EmailJS - SUBSTITUA com suas credenciais
+      // 1. Crie uma conta em https://www.emailjs.com/
+      // 2. Crie um serviço de email
+      // 3. Crie um template com as variáveis: {{from_name}}, {{from_email}}, {{phone}}, {{message}}
+      // 4. Substitua os valores abaixo
+      const result = await emailjs.send(
+        'YOUR_SERVICE_ID',        // Substitua pelo seu Service ID
+        'YOUR_TEMPLATE_ID',       // Substitua pelo seu Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone || 'Não informado',
+          message: formData.message,
+          to_email: 'victor.eng.dev@gmail.com',
+        },
+        'YOUR_PUBLIC_KEY'         // Substitua pela sua Public Key
+      );
+
+      console.log('Email enviado com sucesso:', result);
+      setSubmitStatus('success');
+      
+      // Limpar formulário após sucesso
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
+
+      // Limpar mensagem de sucesso após 5 segundos
+      setTimeout(() => setSubmitStatus(null), 5000);
+
+    } catch (error) {
+      console.error('Erro ao enviar email:', error);
+      setSubmitStatus('error');
+      
+      // Limpar mensagem de erro após 5 segundos
+      setTimeout(() => setSubmitStatus(null), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -42,16 +78,16 @@ export default function ContactForm() {
           FALA <span>COMIGO!</span>
         </h2>
         <form onSubmit={handleSubmit} className={styles.form}>
-          {/* 4. Adicionar labels e conectar com os inputs */}
           <div className={styles.inputGroup}>
             <label htmlFor="name" className={styles.visuallyHidden}>Seu nome completo:</label>
             <input
               type="text"
               id="name"
-              name="name" // Essencial para o handleChange
+              name="name"
               placeholder="Seu nome completo:"
-              value={formData.name} // Controlado pelo estado
+              value={formData.name}
               onChange={handleChange}
+              disabled={isSubmitting}
               required
             />
           </div>
@@ -65,6 +101,7 @@ export default function ContactForm() {
               placeholder="Seu e-mail:"
               value={formData.email}
               onChange={handleChange}
+              disabled={isSubmitting}
               required
             />
           </div>
@@ -72,12 +109,13 @@ export default function ContactForm() {
           <div className={styles.inputGroup}>
             <label htmlFor="phone" className={styles.visuallyHidden}>Seu celular:</label>
             <input
-              type="tel" // Melhor semântica para telefone
+              type="tel"
               id="phone"
               name="phone"
               placeholder="Seu celular:"
               value={formData.phone}
               onChange={handleChange}
+              disabled={isSubmitting}
             />
           </div>
           
@@ -89,13 +127,30 @@ export default function ContactForm() {
               placeholder="Sua mensagem"
               value={formData.message}
               onChange={handleChange}
+              disabled={isSubmitting}
               required
             ></textarea>
           </div>
 
-          {/* 5. Usar <button> em vez de <input type="submit"> */}
-          <button type="submit" className={styles.submitButton}>
-            ENVIAR
+          {/* Mensagens de feedback */}
+          {submitStatus === 'success' && (
+            <div className={styles.successMessage}>
+              ✅ Mensagem enviada com sucesso! Retornarei em breve.
+            </div>
+          )}
+          
+          {submitStatus === 'error' && (
+            <div className={styles.errorMessage}>
+              ❌ Erro ao enviar mensagem. Tente novamente ou entre em contato via email.
+            </div>
+          )}
+
+          <button 
+            type="submit" 
+            className={styles.submitButton}
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'ENVIANDO...' : 'ENVIAR'}
           </button>
         </form>
       </div>
