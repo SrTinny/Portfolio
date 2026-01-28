@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
+import ReactGA from "react-ga4";
 
 // Importação dos componentes da página
 import Header from "./components/Header/Header";
@@ -18,6 +19,13 @@ import useThemeToggle from "./hooks/useThemeToggle";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
+
+// Inicializar Google Analytics
+// Substitua 'YOUR_GA_ID' pelo seu ID do Google Analytics 4
+const GA_ID = import.meta.env.VITE_GA_ID || null;
+if (GA_ID) {
+  ReactGA.initialize(GA_ID);
+}
 
 export default function App() {
   const { isLightMode } = useThemeToggle();

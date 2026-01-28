@@ -1,37 +1,67 @@
 # Dependencies
 node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
 
-# Build
+# Build outputs
 dist/
 build/
+*.tsbuildinfo
 
-# Environment
+# Environment variables
 .env
 .env.local
-.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
 
-# IDE
+# IDE and Editor
 .vscode/
 .idea/
+.DS_Store
+.AppleDouble
+.LSOverride
 *.swp
 *.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.history/
+.ionide
 
 # OS
-.DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 
 # Logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Cache
+# Cache and temporary files
 .cache/
 .parcel-cache/
+.eslintcache
+.node_repl_history
+.pytest_cache/
+.vite/
 
-# Misc
-*.tsbuildinfo
+# Testing
+coverage/
+.nyc_output/
 
+# Misc and project specific files
 MELHORIAS.md
 EMAILJS_CONFIG.md
+.env.example
