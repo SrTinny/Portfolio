@@ -86,7 +86,7 @@ export default function Skills() {
                 transition={{ duration: 0.6 }}
               />
               <motion.h3
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 1 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.2 }}
               >

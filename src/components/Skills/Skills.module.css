@@ -11,7 +11,7 @@
 }
 
 .title {
-  color: var(--color-text);
+  color: var(--color-text-primary);
   font-size: 2.25rem;
   text-align: center;
   margin-bottom: 4rem;
@@ -34,7 +34,7 @@
 .skillCard {
   width: 130px;
   height: 130px;
-  background-color: var(--color-card);
+  background-color: var(--color-surface);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -44,7 +44,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 
 .skillCard:hover {
@@ -63,6 +63,7 @@
   font-size: 0.875rem;
   font-weight: 600;
   transition: color 0.3s; /* Transição suave da cor do texto */
+  color: var(--color-text-primary);
 }
 
 .skillCard:hover h3 {

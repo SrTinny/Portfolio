@@ -27,7 +27,7 @@
 }
 
 .heroText h1 {
-  color: var(--color-text);
+  color: var(--color-text-primary);
   font-size: 2.875rem;
   line-height: 1.2; /* Usar unidade relativa é mais flexível */
 }
@@ -37,7 +37,7 @@
 }
 
 .heroText p {
-  color: var(--color-text);
+  color: var(--color-text-primary);
   margin-top: 1.5rem; /* Espaçamento consistente entre parágrafos */
   max-width: 600px; /* Limita a largura da linha para melhor legibilidade */
 }

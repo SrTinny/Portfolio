@@ -12,6 +12,12 @@
   z-index: 1;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
+  visibility: visible;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45px;
+  min-width: 100px;
 }
 
 .button:disabled {
@@ -39,8 +45,10 @@
   align-items: center;
   gap: 8px;
   transition: color 0.3s ease;
+  color: var(--color-primary);
+  visibility: visible;
 }
 
 .button:hover:not(:disabled) .buttonText {
-  color: var(--color-background);
+  color: #fff;
 }

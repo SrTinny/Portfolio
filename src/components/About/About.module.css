@@ -23,7 +23,7 @@
 
 .txtSobre {
   max-width: 37.5rem;
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 
 .txtSobre h2 {

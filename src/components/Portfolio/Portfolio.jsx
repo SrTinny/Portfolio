@@ -105,7 +105,7 @@ export default function Portfolio() {
                 />
                 <motion.div
                   className={styles.overlay}
-                  initial={{ opacity: 0 }}
+                  initial={{ opacity: 0.9 }}
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 >

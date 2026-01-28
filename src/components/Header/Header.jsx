@@ -43,7 +43,7 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   const menuVariants = {
-    hidden: { opacity: 0, y: -20 },
+    hidden: { opacity: 1, y: 0 },
     visible: {
       opacity: 1,
       y: 0,
@@ -55,7 +55,7 @@ export default function Header() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -10 },
+    hidden: { opacity: 1, x: 0 },
     visible: { opacity: 1, x: 0 },
   };
 
@@ -93,8 +93,8 @@ export default function Header() {
             href="#form"
             className={styles.contactButton}
             onClick={closeMenu}
-            initial={{ opacity: 0 }}
-            animate={isMenuOpen ? { opacity: 1 } : { opacity: 0 }}
+            initial={{ opacity: 1 }}
+            animate={isMenuOpen ? { opacity: 1 } : { opacity: 1 }}
             transition={{ delay: 0.15 }}
           >
             Contato

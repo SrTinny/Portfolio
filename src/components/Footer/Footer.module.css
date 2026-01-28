@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--color-test1);
-  color: var(--color-text);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
   padding: 3rem 4%;
   font-size: 0.875rem;
   transition: background-color 0.3s, color 0.3s;
@@ -25,7 +25,7 @@
   justify-content: space-between;
   gap: 2rem;
   width: 100%; /* Garante que as colunas ocupem todo o espaço disponível */
-  border-bottom: 1px solid var(--color-secondary);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 2rem;
   margin-bottom: 1.5rem; /* Adicionado para separar do copyright */
 }
@@ -55,7 +55,7 @@
 }
 
 .column li a {
-  color: var(--color-text);
+  color: var(--color-text-primary);
   text-decoration: none;
   opacity: 0.85;
   transition: color 0.3s, opacity 0.3s;
@@ -76,11 +76,11 @@
 
 .form input {
   padding: 0.5rem;
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   outline: none;
   background-color: var(--color-background);
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 
 .form button {
@@ -108,7 +108,7 @@
 }
 
 .socialLinks a {
-  color: var(--color-text);
+  color: var(--color-text-primary);
   font-size: 1.2rem;
   transition: color 0.3s, transform 0.2s;
 }
@@ -124,7 +124,7 @@
   justify-content: space-between;
   padding-top: 1.5rem;
   font-size: 0.8rem;
-  color: var(--color-secondary);
+  color: var(--color-text-secondary);
   flex-wrap: wrap;
   gap: 1rem;
   text-align: center;
