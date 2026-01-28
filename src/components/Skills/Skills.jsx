@@ -57,7 +57,7 @@ export default function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          MINHAS <span>ESPECIALIDADES.</span>
+          PRINCIPAIS <span>ESPECIALIDADES.</span>
         </motion.h2>
         <motion.div
           className={styles.skillsGrid}

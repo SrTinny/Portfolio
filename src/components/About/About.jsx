@@ -94,20 +94,19 @@ export default function About() {
               </motion.h2>
               <motion.p variants={itemVariants}>
                 Com mais de 8 anos de experiência em programação e 5 anos
-                dedicados ao desenvolvimento web, minha paixão é construir
-                soluções digitais que sejam criativas, funcionais e intuitivas.
-                Sou um entusiasta de tecnologia e graduando em Engenharia da
-                Computação, o que me dá uma base sólida para unir teoria e
-                prática, transformando desafios complexos em produtos de alta
+                dedicados ao desenvolvimento web, a paixão está em construir
+                soluções digitais criativas, funcionais e intuitivas.
+                Graduando em Engenharia da Computação, unindo teoria e
+                prática para transformar desafios complexos em produtos de alta
                 qualidade.
               </motion.p>
               <motion.p variants={itemVariants}>
-                Minha jornada inclui participação em projetos de impacto na
+                Jornada que inclui participação em projetos de impacto na
                 Universidade Federal do Ceará, como a Biblioteca COVID e o portal
                 FormaMus.
               </motion.p>
               <motion.p variants={itemVariants}>
-                Estou sempre em busca de novos desafios, colaborações e parcerias
+                Sempre em busca de novos desafios, colaborações e parcerias
                 que impulsionem a evolução tecnológica. Vamos construir o futuro,
                 juntos?
               </motion.p>
@@ -149,7 +148,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            POR QUE ME <span>ESCOLHER</span> PARA SEU PROJETO:
+            POR QUE <span>ESCOLHER</span> PARA SEU PROJETO:
           </motion.h3>
 
           <div className={styles.diffGrid}>

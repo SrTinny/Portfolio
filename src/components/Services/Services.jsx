@@ -72,8 +72,8 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2>O QUE EU <span>OFEREÇO:</span></h2>
-          <p>Qualquer tipo de site, para qualquer tipo de nicho. Aqui estão meus serviços principais:</p>
+          <h2>O QUE <span>OFEREÇO:</span></h2>
+          <p>Qualquer tipo de site, para qualquer tipo de nicho. Aqui estão os serviços principais:</p>
         </motion.div>
 
         <motion.div

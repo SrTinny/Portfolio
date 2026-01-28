@@ -8,7 +8,7 @@ const testimonials = [
     name: "Aguardando depoimentos de clientes",
     role: "Seus clientes satisfeitos",
     image: "bi bi-star-fill",
-    text: "Estou coletando depoimentos de clientes satisfeitos para compartilhar aqui. Seu feedback é muito importante!",
+    text: "Coletando depoimentos de clientes satisfeitos. Seu feedback é muito importante!",
     rating: 5
   },
   {
@@ -16,15 +16,15 @@ const testimonials = [
     name: "Seu próximo cliente feliz",
     role: "Próximo projeto de sucesso",
     image: "bi bi-heart-fill",
-    text: "Sou confiável, entrego no prazo e faço projetos de qualidade. Vamos conversar sobre sua ideia?",
+    text: "Confiabilidade, cumprimento de prazos e qualidade em projetos. Vamos conversar sobre sua ideia?",
     rating: 5
   },
   {
     id: 3,
     name: "Mais depoimentos em breve",
-    role: "Trabalhe comigo e vire case",
+    role: "Trabalhe conosco e vire case",
     image: "bi bi-hand-thumbs-up-fill",
-    text: "Se você trabalhar comigo e gostar dos resultados, estarei feliz em incluir seu depoimento aqui.",
+    text: "Resultados de qualidade garantem depoimentos. Estou pronto para incluir seu feedback aqui.",
     rating: 5
   }
 ];
