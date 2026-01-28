@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { motion } from 'framer-motion';
+import AnimatedButton from '../AnimatedButton';
 import styles from './ContactForm.module.css';
 
 // Funções de validação
@@ -167,13 +169,26 @@ export default function ContactForm() {
   return (
     <section className={styles.formulario} id="form" data-aos="fade-up">
       <div className="interface">
-        <h2 className={styles.titulo}>
+        <motion.h2
+          className={styles.titulo}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           FALA <span>COMIGO!</span>
-        </h2>
-        <form onSubmit={handleSubmit} className={styles.form}>
+        </motion.h2>
+        <motion.form
+          onSubmit={handleSubmit}
+          className={styles.form}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           <div className={styles.inputGroup}>
             <label htmlFor="name" className={styles.visuallyHidden}>Seu nome completo:</label>
-            <input
+            <motion.input
               type="text"
               id="name"
               name="name"
@@ -184,15 +199,23 @@ export default function ContactForm() {
               disabled={isSubmitting}
               className={errors.name && touched.name ? styles.inputError : ''}
               required
+              whileFocus={{ scale: 1.01 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             />
             {errors.name && touched.name && (
-              <span className={styles.errorText}>{errors.name}</span>
+              <motion.span
+                className={styles.errorText}
+                initial={{ opacity: 0, y: -5 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                {errors.name}
+              </motion.span>
             )}
           </div>
           
           <div className={styles.inputGroup}>
             <label htmlFor="email" className={styles.visuallyHidden}>Seu e-mail:</label>
-            <input
+            <motion.input
               type="email"
               id="email"
               name="email"
@@ -203,15 +226,23 @@ export default function ContactForm() {
               disabled={isSubmitting}
               className={errors.email && touched.email ? styles.inputError : ''}
               required
+              whileFocus={{ scale: 1.01 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             />
             {errors.email && touched.email && (
-              <span className={styles.errorText}>{errors.email}</span>
+              <motion.span
+                className={styles.errorText}
+                initial={{ opacity: 0, y: -5 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                {errors.email}
+              </motion.span>
             )}
           </div>
 
           <div className={styles.inputGroup}>
             <label htmlFor="phone" className={styles.visuallyHidden}>Seu celular:</label>
-            <input
+            <motion.input
               type="tel"
               id="phone"
               name="phone"
@@ -221,15 +252,23 @@ export default function ContactForm() {
               onBlur={handleBlur}
               disabled={isSubmitting}
               className={errors.phone && touched.phone ? styles.inputError : ''}
+              whileFocus={{ scale: 1.01 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             />
             {errors.phone && touched.phone && (
-              <span className={styles.errorText}>{errors.phone}</span>
+              <motion.span
+                className={styles.errorText}
+                initial={{ opacity: 0, y: -5 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                {errors.phone}
+              </motion.span>
             )}
           </div>
           
           <div className={styles.inputGroup}>
             <label htmlFor="message" className={styles.visuallyHidden}>Sua mensagem:</label>
-            <textarea
+            <motion.textarea
               id="message"
               name="message"
               placeholder="Sua mensagem"
@@ -239,33 +278,48 @@ export default function ContactForm() {
               disabled={isSubmitting}
               className={errors.message && touched.message ? styles.inputError : ''}
               required
-            ></textarea>
+              whileFocus={{ scale: 1.01 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            ></motion.textarea>
             {errors.message && touched.message && (
-              <span className={styles.errorText}>{errors.message}</span>
+              <motion.span
+                className={styles.errorText}
+                initial={{ opacity: 0, y: -5 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                {errors.message}
+              </motion.span>
             )}
           </div>
 
           {/* Mensagens de feedback */}
           {submitStatus === 'success' && (
-            <div className={styles.successMessage}>
+            <motion.div
+              className={styles.successMessage}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+            >
               ✅ Mensagem enviada com sucesso! Retornarei em breve.
-            </div>
+            </motion.div>
           )}
           
           {submitStatus === 'error' && (
-            <div className={styles.errorMessage}>
+            <motion.div
+              className={styles.errorMessage}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+            >
               ❌ Erro ao enviar mensagem. Tente novamente ou entre em contato via email.
-            </div>
+            </motion.div>
           )}
 
-          <button 
-            type="submit" 
-            className={styles.submitButton}
+          <AnimatedButton
+            type="submit"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'ENVIANDO...' : 'ENVIAR'}
-          </button>
-        </form>
+          </AnimatedButton>
+        </motion.form>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 // src/components/Header/Header.jsx
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import styles from "./Header.module.css";
 import logo from "../../assets/logo.jpg";
 import useThemeToggle from "../../hooks/useThemeToggle";
@@ -41,6 +42,23 @@ export default function Header() {
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  const menuVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -10 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.interface}>
@@ -56,20 +74,31 @@ export default function Header() {
           ref={menuRef}
           className={`${styles.menuNav} ${isMenuOpen ? styles.open : ""}`}
         >
-          <ul>
+          <motion.ul
+            initial="hidden"
+            animate={isMenuOpen ? "visible" : "hidden"}
+            variants={menuVariants}
+          >
             {/* 2. Mapear os links dinamicamente */}
             {navLinks.map((link) => (
-              <li key={link.href}>
+              <motion.li key={link.href} variants={itemVariants}>
                 <a href={link.href} onClick={closeMenu}>
                   {link.text}
                 </a>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
           {/* 3. Botão de contato estilizado como link */}
-          <a href="#form" className={styles.contactButton} onClick={closeMenu}>
+          <motion.a
+            href="#form"
+            className={styles.contactButton}
+            onClick={closeMenu}
+            initial={{ opacity: 0 }}
+            animate={isMenuOpen ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ delay: 0.15 }}
+          >
             Contato
-          </a>
+          </motion.a>
         </nav>
 
         <div className={styles.actions}>
