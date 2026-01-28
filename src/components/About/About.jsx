@@ -102,7 +102,7 @@ export default function About() {
                 qualidade.
               </motion.p>
               <motion.p variants={itemVariants}>
-                Minha jornada inclui a participação em projetos de impacto na
+                Minha jornada inclui participação em projetos de impacto na
                 Universidade Federal do Ceará, como a Biblioteca COVID e o portal
                 FormaMus.
               </motion.p>

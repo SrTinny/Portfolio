@@ -86,7 +86,7 @@ export default function ContactForm() {
     const newErrors = {};
     
     Object.keys(formData).forEach((field) => {
-      if (field !== 'phone') { // phone é opcional
+      if (field !== 'phone') { // telefone é opcional
         const isValid = validateField(field, formData[field]);
         if (!isValid) {
           newErrors[field] = errorMessages[field];
@@ -181,7 +181,7 @@ export default function ContactForm() {
               type="text"
               id="name"
               name="name"
-              placeholder="Seu nome completo:"
+              placeholder="Seu nome completo"
               value={formData.name}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -202,7 +202,7 @@ export default function ContactForm() {
               type="email"
               id="email"
               name="email"
-              placeholder="Seu e-mail:"
+              placeholder="Seu e-mail"
               value={formData.email}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -223,7 +223,7 @@ export default function ContactForm() {
               type="tel"
               id="phone"
               name="phone"
-              placeholder="Seu celular:"
+              placeholder="Seu celular"
               value={formData.phone}
               onChange={handleChange}
               onBlur={handleBlur}
