@@ -6,8 +6,11 @@ import ReactGA from "react-ga4";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
+import Services from "./components/Services/Services";
 import About from "./components/About/About";
 import Portfolio from "./components/Portfolio/Portfolio";
+import Testimonials from "./components/Testimonials/Testimonials";
+import FAQ from "./components/FAQ/FAQ";
 import ContactForm from "./components/ContactForm/ContactForm";
 import Footer from "./components/Footer/Footer";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
@@ -52,9 +55,12 @@ export default function App() {
       <Header />
       <main>
         <Home />
+        <Services />
         <Skills />
         <About />
         <Portfolio />
+        <Testimonials />
+        <FAQ />
         <ContactForm />
       </main>
       <Footer />

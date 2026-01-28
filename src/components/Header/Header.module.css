@@ -7,8 +7,9 @@
   width: 100%;
   z-index: 1000;
   background-color: var(--color-background);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .interface {
@@ -52,28 +53,47 @@
   color: var(--color-text-secondary);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease-in-out, transform 0.2s;
-  display: inline-block; /* Necessário para o transform */
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
 }
 
 .menuNav a:hover {
-  color: var(--color-primary);
-  transform: scale(1.05);
+  color: #2f81f7;
+  transform: translateY(-2px);
+}
+
+.menuNav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #2f81f7 0%, #0288d1 100%);
+  transition: width 0.3s ease;
+}
+
+.menuNav a:hover::after {
+  width: 100%;
 }
 
 .contactButton {
   padding: 0.5rem 1.5rem;
-  background-color: var(--color-primary);
-  color: #fff !important; /* Força a cor do texto sobre o estilo geral de link */
-  border-radius: 20px;
+  background: linear-gradient(135deg, #2f81f7 0%, #0288d1 100%);
+  color: #fff !important;
+  border-radius: 8px;
   font-weight: 700;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(47, 129, 247, 0.3);
 }
 
 .contactButton:hover {
-  background-color: var(--color-primary-dark);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #0288d1 0%, #01579b 100%);
+  box-shadow: 0 8px 20px rgba(47, 129, 247, 0.4);
+  transform: translateY(-2px);
 }
 
 .actions {

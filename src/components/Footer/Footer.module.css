@@ -4,6 +4,7 @@
   padding: 3rem 4%;
   font-size: 0.875rem;
   transition: background-color 0.3s, color 0.3s;
+  border-top: 1px solid var(--color-border);
 }
 
 .container {
@@ -62,9 +63,10 @@
 }
 
 .column li a:hover {
-  color: var(--color-primary);
+  color: #2f81f7;
   opacity: 1;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 2px solid #2f81f7;
 }
 
 .form {
@@ -84,7 +86,7 @@
 }
 
 .form button {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, #2f81f7 0%, #0288d1 100%);
   color: #fff;
   padding: 0.5rem;
   border: none;
@@ -92,11 +94,13 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(47, 129, 247, 0.3);
 }
 
 .form button:hover {
-  background-color: var(--color-primary-dark);
-  transform: scale(1.03);
+  background: linear-gradient(135deg, #0288d1 0%, #01579b 100%);
+  box-shadow: 0 6px 16px rgba(47, 129, 247, 0.4);
+  transform: translateY(-2px);
 }
 
 /* Renomeado de .btnSocial para ser mais específico */
@@ -114,7 +118,7 @@
 }
 
 .socialLinks a:hover {
-  color: var(--color-primary);
+  color: #2f81f7;
   transform: translateY(-2px);
 }
 

@@ -3,6 +3,12 @@ import { motion } from "framer-motion";
 import styles from "./Home.module.css";
 import imagemTopo from "../../assets/logo.png";
 
+const stats = [
+  { label: "Anos de experiência", value: "8+" },
+  { label: "Projetos entregues", value: "50+" },
+  { label: "Clientes satisfeitos", value: "30+" },
+];
+
 export default function Home() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -46,28 +52,33 @@ export default function Home() {
             TRANSFORMANDO IDEIAS EM SOLUÇÕES DIGITAIS<span>.</span>
           </motion.h1>
           <motion.p variants={textVariants}>
-            Sou um desenvolvedor full-stack focado em transformar conceitos em
-            realidade digital. Minha especialidade é construir aplicações web
-            completas e sob medida, que unem design funcional, performance e uma
-            ótima experiência de usuário.
+            Sou um desenvolvedor full-stack com <strong>mais de 8 anos de experiência</strong>. 
+            Minha especialidade é construir qualquer tipo de site para qualquer tipo de nicho: 
+            páginas web, sistemas complexos, landing pages e e-commerces.
           </motion.p>
           <motion.p variants={textVariants}>
-            Desde landing pages e portfólios interativos até sistemas complexos
-            e e-commerces, meu objetivo é entregar soluções eficientes e
-            escaláveis, utilizando as tecnologias mais modernas do mercado.
-            Vamos construir algo incrível juntos?
+            Entrego soluções eficientes, escaláveis e orientadas a resultados. 
+            Se você tem uma ideia ou precisa resolver um problema digital, 
+            eu consigo transformar em realidade com qualidade e profissionalismo.
           </motion.p>
 
-          {/* Link estilizado como botão, usando classe do módulo */}
-          <motion.a
-            href="#form"
-            className={styles.contactButton}
-            variants={textVariants}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Entre em contato
-          </motion.a>
+          <motion.div className={styles.ctaButtons} variants={textVariants}>
+            <a href="#services" className={styles.primaryButton}>
+              Ver meus serviços
+            </a>
+            <a href="#form" className={styles.secondaryButton}>
+              Solicitar orçamento grátis
+            </a>
+          </motion.div>
+
+          <motion.div className={styles.stats} variants={textVariants}>
+            {stats.map((stat, index) => (
+              <div key={index} className={styles.stat}>
+                <span className={styles.value}>{stat.value}</span>
+                <span className={styles.label}>{stat.label}</span>
+              </div>
+            ))}
+          </motion.div>
         </motion.div>
 
         <motion.div

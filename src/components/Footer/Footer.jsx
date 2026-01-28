@@ -11,9 +11,9 @@ const socialLinks = [
 ];
 
 const navLinkGroups = [
-  [{ name: 'Projetos', href: '#' }, { name: 'Contratar', href: '#' }],
-  [{ name: 'Modelagem', href: '#' }, { name: 'Trabalhe Comigo', href: '#' }],
-  [{ name: 'Impressões', href: '#' }, { name: 'Contato', href: '#' }],
+  [{ name: 'Serviços', href: '#services' }, { name: 'Projetos', href: '#portfolio' }],
+  [{ name: 'Especialidades', href: '#skills' }, { name: 'Sobre', href: '#about' }],
+  [{ name: 'Depoimentos', href: '#testimonials' }, { name: 'Contato', href: '#form' }],
 ];
 
 export default function Footer() {
@@ -35,7 +35,7 @@ export default function Footer() {
         <div className={styles.columns}>
           <div className={styles.column}>
             <h2>João Victor | Dev</h2>
-            <p>Fique por dentro das novidades</p>
+            <p>Desenvolvedor full-stack que transforma ideias em soluções digitais</p>
             <form onSubmit={handleSubscribe} className={styles.form}>
               {/* Adicionando label para acessibilidade */}
               <label htmlFor="newsletter-email" className={styles.visuallyHidden}>

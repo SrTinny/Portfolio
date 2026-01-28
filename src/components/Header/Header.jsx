@@ -8,9 +8,11 @@ import useThemeToggle from "../../hooks/useThemeToggle";
 // 1. Abstrair os links para um array de objetos
 const navLinks = [
   { href: "#home", text: "Início" },
+  { href: "#services", text: "Serviços" },
   { href: "#skills", text: "Especialidades" },
-  { href: "#about", text: "Sobre" },
   { href: "#portfolio", text: "Projetos" },
+  { href: "#testimonials", text: "Depoimentos" },
+  { href: "#faq", text: "FAQ" },
 ];
 
 export default function Header() {

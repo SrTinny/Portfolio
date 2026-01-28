@@ -42,6 +42,81 @@
   max-width: 600px; /* Limita a largura da linha para melhor legibilidade */
 }
 
+/* Estilos para os botões CTA */
+.ctaButtons {
+  display: flex;
+  gap: 15px;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #2f81f7 0%, #0288d1 100%);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(47, 129, 247, 0.3);
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(47, 129, 247, 0.4);
+}
+
+.secondaryButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: #2f81f7;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 2px solid #2f81f7;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background: #2f81f7;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Estatísticas */
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2f81f7 0%, #0288d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.label {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
 /* Estilos para o botão de contato (anteriormente .btn-contato) */
 .contactButton {
   display: inline-block;
@@ -107,5 +182,36 @@
   
   .contactButton {
     margin-bottom: 2rem; /* Adiciona espaço abaixo do botão no mobile */
+  }
+
+  .ctaButtons {
+    justify-content: center;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .ctaButtons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .value {
+    font-size: 2rem;
   }
 }
