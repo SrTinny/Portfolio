@@ -1,5 +1,5 @@
 // src/components/Portfolio/Portfolio.jsx
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -27,33 +27,35 @@ const projects = [
     link: "https://bootstrap-modelo.vercel.app/",
   },
   {
-    title: "GRID conf",
-    image: "/assets/gridconf.png",
-    description: "Modelo de site para conferência de tecnologia.",
-    link: "https://gridconf.vercel.app/",
+    title: "Monitoramento Ar-Condicionado IoT",
+    description:
+      "Sistema full-stack para controle e monitoramento de ar-condicionado via IoT com ESP32, composto por frontend em React/Vite, backend em Node.js/Express, persistência via Prisma/PostgreSQL, autenticação JWT, controle de acesso por papéis (Admin/User), agendamento automático de comandos e comunicação firmware-backend por heartbeat.",
+    link: "https://sistema-de-monitoramento-de-ar-cond.vercel.app/",
   },
   {
-    title: "LEX Partners",
-    image: "/assets/lexpartners.png",
-    description: "Modelo de site para escritório de advocacia.",
-    link: "https://lexpartners.vercel.app/",
+    title: "Joao Victor Archviz",
+    description:
+      "Projeto desenvolvido para portfolio archviz profissional com interface limpa e conversão focada em contato direto.",
+    link: "https://joao-victor-archviz.vercel.app/",
   },
   {
-    title: "Atelier Vita",
-    image: "/assets/ateliervita.png",
-    description: "Modelo de site para ateliê de costura.",
-    link: "https://ateliervita.vercel.app/",
-  },
-  {
-    title: "Aura AI",
-    image: "/assets/auraai.png",
-    description: "Modelo de site para empresa de IA.",
-    link: "https://auraai-woad.vercel.app/",
+    title: "UX Software",
+    description:
+      "Loja demo full-stack construída com Next.js (frontend) e Express + Prisma (backend). Projeto focado em experiências de UI/UX, com gerenciamento de produtos, categorias livres para admin, carrinho e páginas de suporte; ideal para prototipagem e testes de integração.",
+    link: "https://ux-software.vercel.app/",
   },
 ];
 
 export default function Portfolio() {
   const swiperRef = useRef(null);
+  const [previewLoaded, setPreviewLoaded] = useState({});
+
+  const handlePreviewLoad = (projectTitle) => {
+    setPreviewLoaded((current) => ({
+      ...current,
+      [projectTitle]: true,
+    }));
+  };
 
   return (
     <section className={styles.portfolio} id="portfolio">
@@ -90,13 +92,32 @@ export default function Portfolio() {
                 className={styles.projectCard}
                 aria-label={`Ver o projeto ${project.title}`}
               >
-                <img
-                  src={project.image}
-                  alt={`Screenshot do projeto ${project.title}`}
-                  className={styles.projectImage}
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div className={styles.previewLayer}>
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={`Screenshot do projeto ${project.title}`}
+                      className={styles.projectImage}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <div
+                      className={styles.projectImageFallback}
+                      aria-hidden="true"
+                    />
+                  )}
+                  <iframe
+                    src={project.link}
+                    title={`Pré-visualização ao vivo do projeto ${project.title}`}
+                    className={`${styles.projectIframe} ${
+                      previewLoaded[project.title] ? styles.projectIframeVisible : ""
+                    }`}
+                    loading="lazy"
+                    onLoad={() => handlePreviewLoad(project.title)}
+                    tabIndex={-1}
+                  />
+                </div>
                 <div className={styles.overlay}>
                   <div className={styles.projectDetails}>
                     <h3>{project.title}</h3>
